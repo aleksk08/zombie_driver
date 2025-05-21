@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csyi10ociytdo"
+path="res://.godot/imported/road-slant-flat-curve.obj-a1c2177be1db392d6e97aca9e4cbc3a5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road-slant-flat-curve.obj-a1c2177be1db392d6e97aca9e4cbc3a5.mesh"]
+
+source_file="res://city/road_kit/Models/OBJ format/road-slant-flat-curve.obj"
+dest_files=["res://.godot/imported/road-slant-flat-curve.obj-a1c2177be1db392d6e97aca9e4cbc3a5.mesh", "res://.godot/imported/road-slant-flat-curve.obj-a1c2177be1db392d6e97aca9e4cbc3a5.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

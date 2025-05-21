@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://begg27ci8hk8v"
+path="res://.godot/imported/road-roundabout-barrier.obj-c5596834ed1fb14366ce76be4522eeaa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road-roundabout-barrier.obj-c5596834ed1fb14366ce76be4522eeaa.mesh"]
+
+source_file="res://city/road_kit/Models/OBJ format/road-roundabout-barrier.obj"
+dest_files=["res://.godot/imported/road-roundabout-barrier.obj-c5596834ed1fb14366ce76be4522eeaa.mesh", "res://.godot/imported/road-roundabout-barrier.obj-c5596834ed1fb14366ce76be4522eeaa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

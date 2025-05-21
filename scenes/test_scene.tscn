@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bo0ldkdfsxhyl"]
+[gd_scene load_steps=5 format=3 uid="uid://ds2o0udtwkwqy"]
 
 [ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://7l1irinimxa" path="res://addons/srcoder_simplecar/car.tscn" id="2_j8ivh"]
