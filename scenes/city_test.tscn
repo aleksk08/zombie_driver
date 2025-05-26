@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c3edun57tjkp0"]
+[gd_scene load_steps=21 format=3 uid="uid://c3edun57tjkp0"]
 
 [ext_resource type="PackedScene" uid="uid://claa7mb6nwq3x" path="res://city/road_kit/Models/GLB format/road-split.glb" id="1_s0dyb"]
 [ext_resource type="PackedScene" uid="uid://7l1irinimxa" path="res://addons/srcoder_simplecar/car.tscn" id="1_w0ml3"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://ba3sojj645c0s" path="res://city/road_kit/Models/GLB format/road-slant.glb" id="10_kcvvq"]
 [ext_resource type="PackedScene" uid="uid://qsrf2s5psxbl" path="res://city/road_kit/Models/GLB format/road-slant-high.glb" id="11_5koys"]
 [ext_resource type="PackedScene" uid="uid://biu7kldmpfedx" path="res://city/road_kit/Models/GLB format/tile-high.glb" id="12_5oxvv"]
+[ext_resource type="PackedScene" uid="uid://nyq4kutq6dvm" path="res://city/city_kit/Models/GLB format/building-skyscraper-d.glb" id="15_ep2gn"]
+[ext_resource type="PackedScene" uid="uid://beswk8qmx2wko" path="res://city/city_kit/Models/GLB format/building-j.glb" id="16_j8huj"]
+[ext_resource type="PackedScene" uid="uid://h676hrmo4au1" path="res://city/city_kit/Models/GLB format/building-m.glb" id="17_kcvvq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0ml3"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -39,133 +42,291 @@ shadow_enabled = true
 
 [node name="car" parent="." instance=ExtResource("1_w0ml3")]
 
-[node name="map" type="Node3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
-
-[node name="road-split2" parent="map" instance=ExtResource("1_s0dyb")]
-
-[node name="road-split3" parent="map" instance=ExtResource("1_s0dyb")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 0)
-
-[node name="road-crossing2" parent="map" instance=ExtResource("3_ln6u0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-
-[node name="road-bridge2" parent="map" instance=ExtResource("4_dolet")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
-
-[node name="road-slant-curve2" parent="map" instance=ExtResource("5_pshf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0)
-
-[node name="road-slant-curve3" parent="map" instance=ExtResource("5_pshf2")]
-transform = Transform3D(-2, 0, -8.74228e-08, 0, 1, 0, 1.74846e-07, 0, -1, 6.5, 0, 0)
-
-[node name="road-straight2" parent="map" instance=ExtResource("7_3drvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
-
-[node name="road-intersection2" parent="map" instance=ExtResource("7_ep2gn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="road-curve2" parent="map" instance=ExtResource("8_ip3f0")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 9.5, 0, 2.5)
-
-[node name="road-roundabout2" parent="map" instance=ExtResource("9_j8huj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-
-[node name="road-straight3" parent="map" instance=ExtResource("7_3drvw")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 1)
-
-[node name="road-straight4" parent="map" instance=ExtResource("7_3drvw")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 1)
-
-[node name="road-straight5" parent="map" instance=ExtResource("7_3drvw")]
-transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3)
-
-[node name="road-split4" parent="map" instance=ExtResource("1_s0dyb")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 5)
-
-[node name="road-curve5" parent="map" instance=ExtResource("8_ip3f0")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5, 0, 6.5)
-
-[node name="bRIDGE" type="Node3D" parent="map"]
-
-[node name="slope" type="Node3D" parent="map/bRIDGE"]
-
-[node name="road-slant-high2" parent="map/bRIDGE/slope" instance=ExtResource("11_5koys")]
-transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 10.5, 0, 7)
-
-[node name="road-slant2" parent="map/bRIDGE/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
-
-[node name="slope" type="Node3D" parent="map/bRIDGE/slope"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25, 0, 20)
-
-[node name="road-slant-high2" parent="map/bRIDGE/slope/slope" instance=ExtResource("11_5koys")]
-transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, -11.5, 0, 13)
-
-[node name="road-slant2" parent="map/bRIDGE/slope/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
-
-[node name="bridge_road" type="Node3D" parent="map/bRIDGE"]
-
-[node name="tile-high2" parent="map/bRIDGE/bridge_road" instance=ExtResource("12_5oxvv")]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 0.76, 7)
-
-[node name="road-straight2" parent="map/bRIDGE/bridge_road/tile-high2" instance=ExtResource("7_3drvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
-
-[node name="road-curve6" parent="map" instance=ExtResource("8_ip3f0")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, 7.5)
-
-[node name="road-straight6" parent="map" instance=ExtResource("7_3drvw")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.5, 0, 6)
-
-[node name="bRIDGE2" type="Node3D" parent="map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
-
-[node name="slope" type="Node3D" parent="map/bRIDGE2"]
-
-[node name="road-slant-high2" parent="map/bRIDGE2/slope" instance=ExtResource("11_5koys")]
-transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 10.5, 0, 7)
-
-[node name="road-slant2" parent="map/bRIDGE2/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
-
-[node name="slope" type="Node3D" parent="map/bRIDGE2/slope"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25, 0, 20)
-
-[node name="road-slant-high2" parent="map/bRIDGE2/slope/slope" instance=ExtResource("11_5koys")]
-transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, -11.5, 0, 13)
-
-[node name="road-slant2" parent="map/bRIDGE2/slope/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
-
-[node name="bridge_road" type="Node3D" parent="map/bRIDGE2"]
-
-[node name="tile-high2" parent="map/bRIDGE2/bridge_road" instance=ExtResource("12_5oxvv")]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 0.76, 7)
-
-[node name="road-straight2" parent="map/bRIDGE2/bridge_road/tile-high2" instance=ExtResource("7_3drvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
-
-[node name="road-straight7" parent="map" instance=ExtResource("7_3drvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5, 0, 8)
-
-[node name="curvy_wurvy" type="Node3D" parent="map"]
-
-[node name="road-curve4" parent="map/curvy_wurvy" instance=ExtResource("8_ip3f0")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
-
-[node name="road-curve3" parent="map/curvy_wurvy" instance=ExtResource("8_ip3f0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
-
-[node name="road-split5" parent="map" instance=ExtResource("1_s0dyb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 8)
-
-[node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("3_atcic")]
-follow_target = NodePath("../car")
-
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 material_override = ExtResource("10_ip3f0")
 use_collision = true
 size = Vector3(5000, 1, 5000)
+
+[node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("3_atcic")]
+follow_target = NodePath("../car")
+
+[node name="map" type="Node3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Roads" type="Node3D" parent="map"]
+
+[node name="road-split2" parent="map/Roads" instance=ExtResource("1_s0dyb")]
+
+[node name="road-split3" parent="map/Roads" instance=ExtResource("1_s0dyb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 0)
+
+[node name="road-crossing2" parent="map/Roads" instance=ExtResource("3_ln6u0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="bridge" type="Node3D" parent="map/Roads"]
+
+[node name="road-slant-curve2" parent="map/Roads/bridge" instance=ExtResource("5_pshf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0)
+
+[node name="road-bridge2" parent="map/Roads/bridge" instance=ExtResource("4_dolet")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
+
+[node name="road-slant-curve3" parent="map/Roads/bridge" instance=ExtResource("5_pshf2")]
+transform = Transform3D(-2, 0, -8.74228e-08, 0, 1, 0, 1.74846e-07, 0, -1, 6.5, 0, 0)
+
+[node name="road-straight2" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="road-intersection2" parent="map/Roads" instance=ExtResource("7_ep2gn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="road-curve2" parent="map/Roads" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 9.5, 0, 2.5)
+
+[node name="road-roundabout2" parent="map/Roads" instance=ExtResource("9_j8huj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="road-straight3" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 1)
+
+[node name="road-straight4" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 1)
+
+[node name="road-straight5" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3)
+
+[node name="road-curve5" parent="map/Roads" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.5, 0, 6.5)
+
+[node name="bRIDGE" type="Node3D" parent="map/Roads"]
+
+[node name="slope" type="Node3D" parent="map/Roads/bRIDGE"]
+
+[node name="road-slant-high2" parent="map/Roads/bRIDGE/slope" instance=ExtResource("11_5koys")]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 10.5, 0, 7)
+
+[node name="road-slant2" parent="map/Roads/bRIDGE/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="slope" type="Node3D" parent="map/Roads/bRIDGE/slope"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25, 0, 20)
+
+[node name="road-slant-high2" parent="map/Roads/bRIDGE/slope/slope" instance=ExtResource("11_5koys")]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, -11.5, 0, 13)
+
+[node name="road-slant2" parent="map/Roads/bRIDGE/slope/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="bridge_road" type="Node3D" parent="map/Roads/bRIDGE"]
+
+[node name="tile-high2" parent="map/Roads/bRIDGE/bridge_road" instance=ExtResource("12_5oxvv")]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 0.761, 7)
+
+[node name="road-straight2" parent="map/Roads/bRIDGE/bridge_road/tile-high2" instance=ExtResource("7_3drvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="bRIDGE2" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="slope" type="Node3D" parent="map/Roads/bRIDGE2"]
+
+[node name="road-slant-high2" parent="map/Roads/bRIDGE2/slope" instance=ExtResource("11_5koys")]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 10.5, 0, 7)
+
+[node name="road-slant2" parent="map/Roads/bRIDGE2/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="slope" type="Node3D" parent="map/Roads/bRIDGE2/slope"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25, 0, 20)
+
+[node name="road-slant-high2" parent="map/Roads/bRIDGE2/slope/slope" instance=ExtResource("11_5koys")]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, -11.5, 0, 13)
+
+[node name="road-slant2" parent="map/Roads/bRIDGE2/slope/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="bridge_road" type="Node3D" parent="map/Roads/bRIDGE2"]
+
+[node name="tile-high2" parent="map/Roads/bRIDGE2/bridge_road" instance=ExtResource("12_5oxvv")]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 0.761, 7)
+
+[node name="road-straight2" parent="map/Roads/bRIDGE2/bridge_road/tile-high2" instance=ExtResource("7_3drvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="road-straight7" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5, 0, 8)
+
+[node name="curvy_wurvy" type="Node3D" parent="map/Roads"]
+
+[node name="road-curve4" parent="map/Roads/curvy_wurvy" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
+
+[node name="road-curve3" parent="map/Roads/curvy_wurvy" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
+
+[node name="road-split5" parent="map/Roads" instance=ExtResource("1_s0dyb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, 7.5)
+
+[node name="road-straight6" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 5)
+
+[node name="road-straight8" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(0.9, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 0, 7)
+
+[node name="road-split4" parent="map/Roads" instance=ExtResource("1_s0dyb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="road-straight9" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -0.5)
+
+[node name="road-curve3" parent="map/Roads" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.5, 0, 1)
+
+[node name="bridge2" type="Node3D" parent="map/Roads"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 10)
+
+[node name="road-slant-curve2" parent="map/Roads/bridge2" instance=ExtResource("5_pshf2")]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="road-bridge2" parent="map/Roads/bridge2" instance=ExtResource("4_dolet")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
+
+[node name="road-slant-curve3" parent="map/Roads/bridge2" instance=ExtResource("5_pshf2")]
+transform = Transform3D(-1.5, 0, -1.50996e-07, 0, 1, 0, 2.26494e-07, 0, -1, 6, 0, 0)
+
+[node name="road-straight10" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 2.5)
+
+[node name="road-straight11" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="180-turn" type="Node3D" parent="map/Roads"]
+
+[node name="road-curve4" parent="map/Roads/180-turn" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.5, 0, 10.5)
+
+[node name="road-curve2" parent="map/Roads/180-turn" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.5, 0, 10.5)
+
+[node name="road-curve4" parent="map/Roads" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0, 8.5)
+
+[node name="road-straight12" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(4.8, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 8)
+
+[node name="180-turn2" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, 0.5)
+
+[node name="road-curve4" parent="map/Roads/180-turn2" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.5, 0, 10.5)
+
+[node name="road-curve2" parent="map/Roads/180-turn2" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.5, 0, 10.5)
+
+[node name="road-straight13" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -5, 0, -4.37114e-08, 4, 0, -3)
+
+[node name="bridge3" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5)
+
+[node name="road-slant-curve2" parent="map/Roads/bridge3" instance=ExtResource("5_pshf2")]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="road-bridge2" parent="map/Roads/bridge3" instance=ExtResource("4_dolet")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
+
+[node name="road-slant-curve3" parent="map/Roads/bridge3" instance=ExtResource("5_pshf2")]
+transform = Transform3D(-1.5, 0, -1.50996e-07, 0, 1, 0, 2.26494e-07, 0, -1, 6, 0, 0)
+
+[node name="road-straight14" parent="map/Roads" instance=ExtResource("7_3drvw")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -3.5)
+
+[node name="road-split6" parent="map/Roads" instance=ExtResource("1_s0dyb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11, 0, 0)
+
+[node name="bRIDGE3" type="Node3D" parent="map/Roads"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 22)
+
+[node name="slope" type="Node3D" parent="map/Roads/bRIDGE3"]
+transform = Transform3D(1.5, 0, 0, 0, 2, 0, 0, 0, 1, -13.5, 0, 0)
+
+[node name="road-slant-high2" parent="map/Roads/bRIDGE3/slope" instance=ExtResource("11_5koys")]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 10.5, 0, 7)
+
+[node name="road-slant2" parent="map/Roads/bRIDGE3/slope/road-slant-high2" instance=ExtResource("10_kcvvq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="bridge_road" type="Node3D" parent="map/Roads/bRIDGE3"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03, 0)
+
+[node name="tile-high2" parent="map/Roads/bRIDGE3/bridge_road" instance=ExtResource("12_5oxvv")]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 0.761, 7)
+
+[node name="road-straight2" parent="map/Roads/bRIDGE3/bridge_road/tile-high2" instance=ExtResource("7_3drvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="slope2" type="Node3D" parent="map/Roads/bRIDGE3"]
+transform = Transform3D(-1.5, 0, -8.74228e-08, 0, 2, 0, 1.31134e-07, 0, -1, 37, 0, 14)
+
+[node name="road-slant-high2" parent="map/Roads/bRIDGE3/slope2" instance=ExtResource("11_5koys")]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 10.5, 0, 7)
+
+[node name="road-slant2" parent="map/Roads/bRIDGE3/slope2/road-slant-high2" instance=ExtResource("10_kcvvq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="curvy_wurvy2" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -6.5)
+
+[node name="road-curve4" parent="map/Roads/curvy_wurvy2" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
+
+[node name="road-curve3" parent="map/Roads/curvy_wurvy2" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
+
+[node name="curvy_wurvy3" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -9.5)
+
+[node name="road-curve4" parent="map/Roads/curvy_wurvy3" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
+
+[node name="road-curve3" parent="map/Roads/curvy_wurvy3" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
+
+[node name="curvy_wurvy4" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -12.5)
+
+[node name="road-curve4" parent="map/Roads/curvy_wurvy4" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
+
+[node name="road-curve3" parent="map/Roads/curvy_wurvy4" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
+
+[node name="curvy_wurvy5" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -9.5)
+
+[node name="road-curve4" parent="map/Roads/curvy_wurvy5" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
+
+[node name="road-curve3" parent="map/Roads/curvy_wurvy5" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
+
+[node name="curvy_wurvy6" type="Node3D" parent="map/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -12)
+
+[node name="road-curve4" parent="map/Roads/curvy_wurvy6" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
+
+[node name="road-curve3" parent="map/Roads/curvy_wurvy6" instance=ExtResource("8_ip3f0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
+
+[node name="Builds" type="Node3D" parent="map"]
+
+[node name="building-skyscraper-d2" parent="map/Builds" instance=ExtResource("15_ep2gn")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.1, 0, 1.2)
+
+[node name="building-j2" parent="map/Builds" instance=ExtResource("16_j8huj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 6.95, 0, 1.5)
+
+[node name="building-m2" parent="map/Builds" instance=ExtResource("17_kcvvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, 1.2)
