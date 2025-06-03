@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://ldrnk6b441ec"]
+
+[ext_resource type="PackedScene" uid="uid://d2dqipnn8e4eo" path="res://zombie/zombie_ragdoll.tscn" id="1_eyu0k"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_prig5"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_y62sc"]
+sky_material = SubResource("ProceduralSkyMaterial_prig5")
+
+[sub_resource type="Environment" id="Environment_j7tsn"]
+background_mode = 2
+sky = SubResource("Sky_y62sc")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="TestScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j7tsn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.980203, -0.17147, 0.0989974, -1.49013e-08, 0.499998, 0.866027, -0.197996, -0.848882, 0.490099, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Zombie" parent="." instance=ExtResource("1_eyu0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875286, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.877583, -0.229849, 0.420735, 0, 0.877583, 0.479426, -0.479426, -0.420736, 0.770151, 1.55256, 2.30381, 2.91147)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(50, 1, 50)
