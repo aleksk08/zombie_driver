@@ -14,5 +14,5 @@ func activate_ragdoll():
 	
 
 func _on_body_entered(body: Node3D) -> void:
-	if body.name == "Player":
+	if body is Player:
 		activate_ragdoll()

@@ -1,4 +1,5 @@
 extends VehicleBody3D
+class_name Player
 
 @export_category("Car Settings")
 ## max steer in radians for the front wheels- defaults to 0.45
