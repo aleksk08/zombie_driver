@@ -49,8 +49,8 @@ physics_interpolation_mode = 1
 
 [node name="Physical Bone mixamorig_Hips" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
 transform = Transform3D(-0.992551, 0.121614, -0.00730504, 0.029432, 0.181162, -0.983013, -0.118224, -0.975905, -0.183392, -0.000101328, 1.07704, -0.0176535)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63815e-05, 0.000130437, 0.063975)
-body_offset = Transform3D(-0.99997, 0.00769236, 0.000189842, 2.37487e-08, 0.0246727, -0.999696, -0.00769468, -0.999666, -0.0246719, 1.32322e-05, 0.0639523, 0.00170898)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63813e-05, 0.000130437, 0.063975)
+body_offset = Transform3D(-0.99997, 0.00769234, 0.000189838, 2.14204e-08, 0.0246727, -0.999696, -0.00769469, -0.999666, -0.0246719, 1.32322e-05, 0.0639523, 0.00170898)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_Spine" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="1"]
@@ -73,8 +73,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_Head" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="4"]
 transform = Transform3D(-0.99895, 0.0147926, -0.0433604, 0.0456774, 0.248471, -0.967562, -0.00353894, -0.968526, -0.248886, 0.00681567, 1.89326, 0.144777)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25178e-05, 7.58283e-06, 0.17514)
-body_offset = Transform3D(-1, -1.44839e-05, 1.57282e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, -2.52724e-05, 0.173319, 0.0251904)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25172e-05, 7.58283e-06, 0.17514)
+body_offset = Transform3D(-1, -1.44839e-05, 1.57319e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, -2.52724e-05, 0.173319, 0.0251904)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftArm" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="5"]
@@ -85,14 +85,14 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftForeArm" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="6"]
 transform = Transform3D(0.929735, -0.313229, 0.193597, -0.247442, -0.142093, 0.958427, -0.272698, -0.938987, -0.209615, 0.209016, 1.12993, 0.0862417)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96481e-07, 3.16713e-05, 0.147493)
-body_offset = Transform3D(1, -1.51992e-06, -1.74344e-06, -1.66148e-06, -1.38581e-06, -1, 1.40071e-06, 1, -1.35601e-06, 9.53674e-07, 0.147493, -3.14713e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19646e-07, 3.16713e-05, 0.147492)
+body_offset = Transform3D(1, -1.51992e-06, -1.74344e-06, -1.66148e-06, -1.38581e-06, -1, 1.40071e-06, 1, -1.35601e-06, 4.76837e-07, 0.147492, -3.14713e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightArm" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
-transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250924, -0.199447, 1.36367, -0.0239916)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77233e-05, 3.28524e-05, 0.0922742)
-body_offset = Transform3D(1, -1.69873e-06, -4.29619e-06, -4.37628e-06, -4.54858e-06, -1, 1.78814e-06, 1, -4.6324e-06, 1.81198e-05, 0.0922742, -3.24249e-05)
+transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250925, -0.199447, 1.36367, -0.0239916)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77243e-05, 3.28536e-05, 0.0922742)
+body_offset = Transform3D(1, -1.69873e-06, -4.28595e-06, -4.37628e-06, -4.56348e-06, -1, 1.78814e-06, 1, -4.64544e-06, 1.81198e-05, 0.0922742, -3.24249e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightForeArm" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="8"]
@@ -102,15 +102,15 @@ body_offset = Transform3D(1, 8.04663e-07, 5.1707e-06, 5.0962e-06, -0.00012888, -
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftUpLeg" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="9"]
-transform = Transform3D(-0.973892, 0.151949, -0.168661, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139867, 0.797019, 0.0155125)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76579e-05, 1.69686e-05, 0.162676)
-body_offset = Transform3D(1, 1.21593e-05, 5.95301e-06, 5.97537e-06, -4.63426e-06, -1, -1.21891e-05, 1, -4.64916e-06, 1.66893e-05, 0.162676, -1.62125e-05)
+transform = Transform3D(-0.973892, 0.151949, -0.16866, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139867, 0.797019, 0.0155125)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76313e-05, 1.6954e-05, 0.162676)
+body_offset = Transform3D(1, 1.19507e-05, 5.7891e-06, 5.7742e-06, -4.57466e-06, -1, -1.20401e-05, 1, -4.55976e-06, 1.66893e-05, 0.162676, -1.62125e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftLeg" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
 transform = Transform3D(-0.940136, 0.319456, -0.118709, -0.163713, -0.117835, 0.979445, 0.298902, 0.940246, 0.16308, 0.196206, 0.40516, 0.0221701)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -3.64787e-06, 4.18824e-06, 0.243379)
-body_offset = Transform3D(1, 2.98023e-08, -6.85453e-07, -6.78003e-07, -1.54972e-06, -1, 0, 1, -1.53482e-06, 3.8147e-06, 0.243379, -3.8147e-06)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -3.65694e-06, 4.19187e-06, 0.243379)
+body_offset = Transform3D(1, 2.98023e-08, -6.48201e-07, -6.63102e-07, -1.56462e-06, -1, 0, 1, -1.54972e-06, 3.8147e-06, 0.243379, -3.8147e-06)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftFoot" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
@@ -127,8 +127,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_RightLeg" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="13"]
 transform = Transform3D(-0.877868, -0.473643, 0.0707805, 0.142335, -0.116928, 0.982888, -0.457261, 0.872921, 0.170063, -0.176125, 0.40539, -0.0187864)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 3.1319e-05, -2.27069e-05, 0.243244)
-body_offset = Transform3D(1, 7.15256e-07, 6.25849e-07, 5.47618e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.45058e-07, -3.14713e-05, 0.243244, 2.28882e-05)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 3.13245e-05, -2.27106e-05, 0.243244)
+body_offset = Transform3D(1, 7.15256e-07, 6.03497e-07, 5.32717e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.30157e-07, -3.14713e-05, 0.243244, 2.28882e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightFoot" parent="Zombie/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="14"]
@@ -160,8 +160,8 @@ physics_interpolation_mode = 1
 
 [node name="Physical Bone mixamorig_Hips" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
 transform = Transform3D(-0.992551, 0.121614, -0.00730504, 0.029432, 0.181162, -0.983013, -0.118224, -0.975905, -0.183392, -6.00815e-05, 1.07705, -0.0176487)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75075e-05, 0.000130033, 0.0639786)
-body_offset = Transform3D(-0.99997, 0.00769236, 0.000189842, 2.37487e-08, 0.0246727, -0.999696, -0.00769468, -0.999666, -0.0246719, 5.43594e-05, 0.0639559, 0.00170898)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75073e-05, 0.000130033, 0.0639786)
+body_offset = Transform3D(-0.99997, 0.00769234, 0.000189838, 2.14204e-08, 0.0246727, -0.999696, -0.00769469, -0.999666, -0.0246719, 5.43594e-05, 0.0639559, 0.00170898)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_Spine" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="1"]
@@ -184,8 +184,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_Head" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="4"]
 transform = Transform3D(-0.99895, 0.0147926, -0.0433604, 0.0456774, 0.248471, -0.967562, -0.00353894, -0.968526, -0.248886, 0.00681591, 1.89326, 0.144803)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29949e-05, 3.12477e-05, 0.17515)
-body_offset = Transform3D(-1, -1.44839e-05, 1.57282e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, -2.57492e-05, 0.173325, 0.0252151)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29942e-05, 3.12477e-05, 0.17515)
+body_offset = Transform3D(-1, -1.44839e-05, 1.57319e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, -2.57492e-05, 0.173325, 0.0252151)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftArm" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="5"]
@@ -201,9 +201,9 @@ body_offset = Transform3D(1, -1.51992e-06, -1.74344e-06, -1.66148e-06, -1.38581e
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightArm" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
-transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250924, -0.199409, 1.36366, -0.0239649)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25461e-05, 2.33157e-05, 0.0922685)
-body_offset = Transform3D(1, -1.69873e-06, -4.29619e-06, -4.37628e-06, -4.54858e-06, -1, 1.78814e-06, 1, -4.6324e-06, 6.29425e-05, 0.0922685, -2.28882e-05)
+transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250925, -0.199409, 1.36366, -0.0239649)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2547e-05, 2.33169e-05, 0.0922685)
+body_offset = Transform3D(1, -1.69873e-06, -4.28595e-06, -4.37628e-06, -4.56348e-06, -1, 1.78814e-06, 1, -4.64544e-06, 6.29425e-05, 0.0922685, -2.28882e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightForeArm" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="8"]
@@ -213,15 +213,15 @@ body_offset = Transform3D(1, 8.04663e-07, 5.1707e-06, 5.0962e-06, -0.00012888, -
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftUpLeg" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="9"]
-transform = Transform3D(-0.973892, 0.151949, -0.168661, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139872, 0.79703, 0.015543)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81344e-05, -1.59332e-05, 0.162676)
-body_offset = Transform3D(1, 1.21593e-05, 5.95301e-06, 5.97537e-06, -4.63426e-06, -1, -1.21891e-05, 1, -4.64916e-06, 1.71661e-05, 0.162676, 1.66893e-05)
+transform = Transform3D(-0.973892, 0.151949, -0.16866, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139872, 0.79703, 0.015543)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81077e-05, -1.59478e-05, 0.162676)
+body_offset = Transform3D(1, 1.19507e-05, 5.7891e-06, 5.7742e-06, -4.57466e-06, -1, -1.20401e-05, 1, -4.55976e-06, 1.71661e-05, 0.162676, 1.66893e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftLeg" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
 transform = Transform3D(-0.940136, 0.319456, -0.118709, -0.163713, -0.117835, 0.979445, 0.298902, 0.940246, 0.16308, 0.196229, 0.405164, 0.0221844)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 1.44719e-05, -1.67926e-05, 0.243376)
-body_offset = Transform3D(1, 2.98023e-08, -6.85453e-07, -6.78003e-07, -1.54972e-06, -1, 0, 1, -1.53482e-06, -1.43051e-05, 0.243376, 1.71661e-05)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 1.44629e-05, -1.6789e-05, 0.243376)
+body_offset = Transform3D(1, 2.98023e-08, -6.48201e-07, -6.63102e-07, -1.56462e-06, -1, 0, 1, -1.54972e-06, -1.43051e-05, 0.243376, 1.71661e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftFoot" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
@@ -238,8 +238,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_RightLeg" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="13"]
 transform = Transform3D(-0.877868, -0.473643, 0.0707805, 0.142335, -0.116928, 0.982888, -0.457261, 0.872921, 0.170063, -0.176072, 0.405389, -0.018795)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 7.42344e-05, 1.06717e-05, 0.243243)
-body_offset = Transform3D(1, 7.15256e-07, 6.25849e-07, 5.47618e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.45058e-07, -7.43866e-05, 0.243243, -1.04904e-05)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 7.42398e-05, 1.06681e-05, 0.243243)
+body_offset = Transform3D(1, 7.15256e-07, 6.03497e-07, 5.32717e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.30157e-07, -7.43866e-05, 0.243243, -1.04904e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightFoot" parent="Zombie7/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="14"]
@@ -270,9 +270,9 @@ transform = Transform3D(-0.986349, 0, -0.164669, 0, 1, 0, 0.164669, 0, -0.986349
 physics_interpolation_mode = 1
 
 [node name="Physical Bone mixamorig_Hips" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
-transform = Transform3D(-0.992551, 0.121614, -0.00730505, 0.029432, 0.181162, -0.983013, -0.118224, -0.975905, -0.183392, -3.43323e-05, 1.07702, -0.0175514)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000105448, 0.000227148, 0.0639746)
-body_offset = Transform3D(-0.99997, 0.00769236, 0.000189841, 2.37487e-08, 0.0246727, -0.999696, -0.00769468, -0.999666, -0.0246719, 9.15527e-05, 0.0639496, 0.00180626)
+transform = Transform3D(-0.992551, 0.121614, -0.00730504, 0.029432, 0.181162, -0.983013, -0.118224, -0.975905, -0.183392, -3.43323e-05, 1.07702, -0.0175514)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000105448, 0.000227145, 0.0639747)
+body_offset = Transform3D(-0.99997, 0.00769234, 0.000189838, 2.14204e-08, 0.0246727, -0.999696, -0.00769469, -0.999666, -0.0246719, 9.15527e-05, 0.0639496, 0.00180626)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_Spine" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="1"]
@@ -295,8 +295,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_Head" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="4"]
 transform = Transform3D(-0.99895, 0.0147926, -0.0433604, 0.0456774, 0.248471, -0.967562, -0.00353894, -0.968526, -0.248886, 0.00664711, 1.89327, 0.144751)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000191795, -1.78162e-05, 0.175142)
-body_offset = Transform3D(-1, -1.44839e-05, 1.57282e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, -0.00019455, 0.173325, 0.0251656)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000191794, -1.78162e-05, 0.175142)
+body_offset = Transform3D(-1, -1.44839e-05, 1.57319e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, -0.00019455, 0.173325, 0.0251656)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftArm" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="5"]
@@ -312,9 +312,9 @@ body_offset = Transform3D(1, -1.51992e-06, -1.74344e-06, -1.66148e-06, -1.38581e
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightArm" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
-transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250924, -0.199389, 1.36365, -0.0239353)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.97394e-05, 2.52231e-05, 0.0922694)
-body_offset = Transform3D(1, -1.69873e-06, -4.29619e-06, -4.37628e-06, -4.54858e-06, -1, 1.78814e-06, 1, -4.6324e-06, 0.000100136, 0.0922694, -2.47955e-05)
+transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250925, -0.199389, 1.36365, -0.0239353)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.97403e-05, 2.52243e-05, 0.0922694)
+body_offset = Transform3D(1, -1.69873e-06, -4.28595e-06, -4.37628e-06, -4.56348e-06, -1, 1.78814e-06, 1, -4.64544e-06, 0.000100136, 0.0922694, -2.47955e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightForeArm" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="8"]
@@ -324,15 +324,15 @@ body_offset = Transform3D(1, 8.04663e-07, 5.1707e-06, 5.0962e-06, -0.00012888, -
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftUpLeg" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="9"]
-transform = Transform3D(-0.973892, 0.151949, -0.168661, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139874, 0.797478, 0.0155907)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76467e-05, -0.000201424, 0.162267)
-body_offset = Transform3D(1, 1.21593e-05, 5.95301e-06, 5.97537e-06, -4.63426e-06, -1, -1.21891e-05, 1, -4.64916e-06, -2.86102e-05, 0.162267, 0.000202179)
+transform = Transform3D(-0.973892, 0.151949, -0.16866, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139777, 0.798024, 0.0155754)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.32209e-07, -0.000340678, 0.161731)
+body_offset = Transform3D(1, 1.19507e-05, 5.7891e-06, 5.7742e-06, -4.57466e-06, -1, -1.20401e-05, 1, -4.55976e-06, 0, 0.161731, 0.000341415)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftLeg" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
 transform = Transform3D(-0.940136, 0.319456, -0.118709, -0.163713, -0.117835, 0.979445, 0.298902, 0.940246, 0.16308, 0.196262, 0.405171, 0.0221958)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 4.40358e-05, -3.68198e-05, 0.243371)
-body_offset = Transform3D(1, 2.98023e-08, -6.85453e-07, -6.78003e-07, -1.54972e-06, -1, 0, 1, -1.53482e-06, -4.3869e-05, 0.243371, 3.71933e-05)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 4.40268e-05, -3.68162e-05, 0.243371)
+body_offset = Transform3D(1, 2.98023e-08, -6.48201e-07, -6.63102e-07, -1.56462e-06, -1, 0, 1, -1.54972e-06, -4.3869e-05, 0.243371, 3.71933e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftFoot" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
@@ -349,8 +349,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_RightLeg" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="13"]
 transform = Transform3D(-0.877868, -0.473643, 0.0707805, 0.142335, -0.116928, 0.982888, -0.457261, 0.872921, 0.170063, -0.176077, 0.405366, -0.0187683)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 8.61553e-05, -1.88922e-05, 0.243261)
-body_offset = Transform3D(1, 7.15256e-07, 6.25849e-07, 5.47618e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.45058e-07, -8.63075e-05, 0.243261, 1.90735e-05)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 8.61608e-05, -1.88958e-05, 0.243261)
+body_offset = Transform3D(1, 7.15256e-07, 6.03497e-07, 5.32717e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.30157e-07, -8.63075e-05, 0.243261, 1.90735e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightFoot" parent="Zombie13/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="14"]
@@ -381,9 +381,9 @@ transform = Transform3D(-0.986349, 0, -0.164669, 0, 1, 0, 0.164669, 0, -0.986349
 physics_interpolation_mode = 1
 
 [node name="Physical Bone mixamorig_Hips" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
-transform = Transform3D(-0.992551, 0.121614, -0.00730505, 0.029432, 0.181162, -0.983013, -0.118224, -0.975905, -0.183392, -2.64645e-05, 1.07703, -0.0175686)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000111262, 0.000208052, 0.0639735)
-body_offset = Transform3D(-0.99997, 0.00769236, 0.000189841, 2.37487e-08, 0.0246727, -0.999696, -0.00769468, -0.999666, -0.0246719, 9.75132e-05, 0.0639489, 0.00178719)
+transform = Transform3D(-0.992551, 0.121614, -0.00730504, 0.029432, 0.181162, -0.983013, -0.118224, -0.975905, -0.183392, -2.64645e-05, 1.07703, -0.0175686)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000111261, 0.000208049, 0.0639735)
+body_offset = Transform3D(-0.99997, 0.00769234, 0.000189838, 2.14204e-08, 0.0246727, -0.999696, -0.00769469, -0.999666, -0.0246719, 9.75132e-05, 0.0639489, 0.00178719)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_Spine" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="1"]
@@ -406,8 +406,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_Head" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="4"]
 transform = Transform3D(-0.99895, 0.0147926, -0.0433604, 0.0456774, 0.248471, -0.967562, -0.00353894, -0.968526, -0.248886, 0.00684905, 1.89327, 0.144493)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9566e-06, -0.000269989, 0.175087)
-body_offset = Transform3D(-1, -1.44839e-05, 1.57282e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, 6.19888e-06, 0.173307, 0.0249081)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.95725e-06, -0.000269989, 0.175087)
+body_offset = Transform3D(-1, -1.44839e-05, 1.57319e-05, -1.76355e-05, 0.143787, -0.989609, 1.2055e-05, -0.989609, -0.143787, 6.19888e-06, 0.173307, 0.0249081)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftArm" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="5"]
@@ -423,9 +423,9 @@ body_offset = Transform3D(1, -1.51992e-06, -1.74344e-06, -1.66148e-06, -1.38581e
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightArm" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="7"]
-transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250924, -0.199244, 1.36362, -0.0242043)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21064e-06, -0.000260879, 0.0922647)
-body_offset = Transform3D(1, -1.69873e-06, -4.29619e-06, -4.37628e-06, -4.54858e-06, -1, 1.78814e-06, 1, -4.6324e-06, -3.8147e-06, 0.0922647, 0.000261307)
+transform = Transform3D(0.626581, 0.724777, 0.286522, -0.207134, -0.199549, 0.957745, 0.751326, -0.659453, 0.0250925, -0.199244, 1.36362, -0.0242043)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2097e-06, -0.000260878, 0.0922647)
+body_offset = Transform3D(1, -1.69873e-06, -4.28595e-06, -4.37628e-06, -4.56348e-06, -1, 1.78814e-06, 1, -4.64544e-06, -3.8147e-06, 0.0922647, 0.000261307)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightForeArm" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="8"]
@@ -435,15 +435,15 @@ body_offset = Transform3D(1, 8.04663e-07, 5.1707e-06, 5.0962e-06, -0.00012888, -
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftUpLeg" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="9"]
-transform = Transform3D(-0.973892, 0.151949, -0.168661, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139952, 0.797068, 0.0155449)
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.43589e-05, -4.3112e-05, 0.162654)
-body_offset = Transform3D(1, 1.21593e-05, 5.95301e-06, 5.97537e-06, -4.63426e-06, -1, -1.21891e-05, 1, -4.64916e-06, -6.53267e-05, 0.162654, 4.3869e-05)
+transform = Transform3D(-0.973892, 0.151949, -0.16866, -0.114977, 0.31046, 0.943607, 0.195743, 0.938363, -0.284884, 0.139952, 0.797068, 0.0155449)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.43856e-05, -4.31266e-05, 0.162654)
+body_offset = Transform3D(1, 1.19507e-05, 5.7891e-06, 5.7742e-06, -4.57466e-06, -1, -1.20401e-05, 1, -4.55976e-06, -6.53267e-05, 0.162654, 4.3869e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftLeg" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="10"]
 transform = Transform3D(-0.940136, 0.319456, -0.118709, -0.163713, -0.117835, 0.979445, 0.298902, 0.940246, 0.16308, 0.196342, 0.405245, 0.0217133)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 0.000274825, 0.00039901, 0.243387)
-body_offset = Transform3D(1, 2.98023e-08, -6.85453e-07, -6.78003e-07, -1.54972e-06, -1, 0, 1, -1.53482e-06, -0.000274658, 0.243387, -0.000398636)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 0.000274816, 0.000399013, 0.243387)
+body_offset = Transform3D(1, 2.98023e-08, -6.48201e-07, -6.63102e-07, -1.56462e-06, -1, 0, 1, -1.54972e-06, -0.000274658, 0.243387, -0.000398636)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_LeftFoot" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="11"]
@@ -460,8 +460,8 @@ can_sleep = false
 
 [node name="Physical Bone mixamorig_RightLeg" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="13"]
 transform = Transform3D(-0.877868, -0.473643, 0.0707805, 0.142335, -0.116928, 0.982888, -0.457261, 0.872921, 0.170063, -0.17608, 0.405355, -0.0187702)
-joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 8.37711e-05, -1.88922e-05, 0.243273)
-body_offset = Transform3D(1, 7.15256e-07, 6.25849e-07, 5.47618e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.45058e-07, -8.39233e-05, 0.243273, 1.90735e-05)
+joint_offset = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 8.37766e-05, -1.88958e-05, 0.243273)
+body_offset = Transform3D(1, 7.15256e-07, 6.03497e-07, 5.32717e-07, -7.00355e-07, -1, -7.45058e-07, 1, -7.30157e-07, -8.39233e-05, 0.243273, 1.90735e-05)
 can_sleep = false
 
 [node name="Physical Bone mixamorig_RightFoot" parent="Zombie19/ZombieIdle/Skeleton3D/PhysicalBoneSimulator3D" index="14"]
