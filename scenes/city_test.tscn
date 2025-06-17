@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c3edun57tjkp0"]
+[gd_scene load_steps=34 format=3 uid="uid://c3edun57tjkp0"]
 
 [ext_resource type="PackedScene" uid="uid://claa7mb6nwq3x" path="res://city/road_kit/Models/GLB format/road-split.glb" id="1_s0dyb"]
 [ext_resource type="PackedScene" uid="uid://7l1irinimxa" path="res://addons/srcoder_simplecar/car.tscn" id="1_w0ml3"]
@@ -28,6 +28,8 @@
 [ext_resource type="PackedScene" uid="uid://h676hrmo4au1" path="res://city/city_kit/Models/GLB format/building-m.glb" id="17_kcvvq"]
 [ext_resource type="PackedScene" uid="uid://ci1rt6bs0mci1" path="res://city/road_kit/Models/GLB format/road-intersection-path.glb" id="20_2k10i"]
 [ext_resource type="PackedScene" uid="uid://dqi82wth7i87k" path="res://city/road_kit/Models/GLB format/road-curve-intersection.glb" id="22_6ij4o"]
+[ext_resource type="PackedScene" uid="uid://cpa60otc41nh0" path="res://prefabs/game.tscn" id="29_tn53r"]
+[ext_resource type="PackedScene" uid="uid://c2a3hfndf6pvy" path="res://ui/scenes/in_game_ui.tscn" id="30_0ulum"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0ml3"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -919,3 +921,8 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 
 [node name="road-straight23" parent="map/SUburb_divider2" instance=ExtResource("7_3drvw")]
 transform = Transform3D(3.6, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0, 0)
+
+[node name="Game" parent="." node_paths=PackedStringArray("ui") instance=ExtResource("29_tn53r")]
+ui = NodePath("../in_game_ui")
+
+[node name="in_game_ui" parent="." instance=ExtResource("30_0ulum")]
