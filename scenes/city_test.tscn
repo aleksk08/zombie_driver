@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c3edun57tjkp0"]
+[gd_scene load_steps=39 format=3 uid="uid://c3edun57tjkp0"]
 
 [ext_resource type="PackedScene" uid="uid://claa7mb6nwq3x" path="res://city/road_kit/Models/GLB format/road-split.glb" id="1_s0dyb"]
 [ext_resource type="PackedScene" uid="uid://7l1irinimxa" path="res://addons/srcoder_simplecar/car.tscn" id="1_w0ml3"]
@@ -20,9 +20,13 @@
 [ext_resource type="PackedScene" uid="uid://brorofvwmnkl1" path="res://city/city_kit/Models/GLB format/building-e.glb" id="11_6t4r8"]
 [ext_resource type="PackedScene" uid="uid://biu7kldmpfedx" path="res://city/road_kit/Models/GLB format/tile-high.glb" id="12_5oxvv"]
 [ext_resource type="PackedScene" uid="uid://c4o5qkesr4hw1" path="res://city/city_kit/Models/GLB format/building-f.glb" id="12_nbi14"]
+[ext_resource type="PackedScene" uid="uid://mwblm3ef8nbb" path="res://city/city_kit/Models/GLB format/building-k.glb" id="13_ubdhp"]
+[ext_resource type="PackedScene" uid="uid://cvj1b1j475ufx" path="res://city/city_kit/Models/GLB format/building-l.glb" id="14_caqhx"]
+[ext_resource type="PackedScene" uid="uid://cpcyk7javscf5" path="res://city/city_kit/Models/GLB format/building-skyscraper-b.glb" id="15_2ba2b"]
 [ext_resource type="PackedScene" uid="uid://nyq4kutq6dvm" path="res://city/city_kit/Models/GLB format/building-skyscraper-d.glb" id="15_ep2gn"]
 [ext_resource type="PackedScene" uid="uid://bww48411s5s27" path="res://city/road_kit/Models/GLB format/road-bend-square.glb" id="15_kcvvq"]
 [ext_resource type="PackedScene" uid="uid://dfdjnf33rm18h" path="res://city/road_kit/Models/GLB format/road-crossroad-path.glb" id="16_5koys"]
+[ext_resource type="PackedScene" uid="uid://b88t6r2k5x2n1" path="res://city/city_kit/Models/GLB format/building-n.glb" id="16_6if5w"]
 [ext_resource type="PackedScene" uid="uid://beswk8qmx2wko" path="res://city/city_kit/Models/GLB format/building-j.glb" id="16_j8huj"]
 [ext_resource type="PackedScene" uid="uid://bptkg5i0twoje" path="res://city/road_kit/Models/GLB format/road-end-round.glb" id="17_5oxvv"]
 [ext_resource type="PackedScene" uid="uid://h676hrmo4au1" path="res://city/city_kit/Models/GLB format/building-m.glb" id="17_kcvvq"]
@@ -30,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://dqi82wth7i87k" path="res://city/road_kit/Models/GLB format/road-curve-intersection.glb" id="22_6ij4o"]
 [ext_resource type="PackedScene" uid="uid://cpa60otc41nh0" path="res://prefabs/game.tscn" id="29_tn53r"]
 [ext_resource type="PackedScene" uid="uid://c2a3hfndf6pvy" path="res://ui/scenes/in_game_ui.tscn" id="30_0ulum"]
+[ext_resource type="PackedScene" uid="uid://d2dqipnn8e4eo" path="res://prefabs/zombie_ragdoll.tscn" id="31_0ulum"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0ml3"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -56,7 +61,7 @@ shadow_enabled = true
 [node name="car" parent="." instance=ExtResource("1_w0ml3")]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, -0.5, -183)
 material_override = ExtResource("10_ip3f0")
 use_collision = true
 size = Vector3(5000, 1, 5000)
@@ -81,7 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 6.95, 0, 1.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, 1.2)
 
 [node name="Suburbs" type="Node3D" parent="map/Builds"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.8, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.8, 0, -0.5)
 
 [node name="building-b2" parent="map/Builds/Suburbs" instance=ExtResource("7_nsc5s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1, 0, 8)
@@ -103,6 +108,96 @@ transform = Transform3D(-5.68248e-08, 0, 1, 0, 1, 0, -1.3, 0, -4.37114e-08, 19.2
 
 [node name="building-f3" parent="map/Builds/Suburbs" instance=ExtResource("12_nbi14")]
 transform = Transform3D(-4.80825e-08, 0, 1, 0, 1, 0, -1.1, 0, -4.37114e-08, 19.25, 0, 14.71)
+
+[node name="Suburbs2" type="Node3D" parent="map/Builds"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 82, 0, 45)
+
+[node name="building-b2" parent="map/Builds/Suburbs2" instance=ExtResource("7_nsc5s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1, 0, 8)
+
+[node name="building-c2" parent="map/Builds/Suburbs2" instance=ExtResource("8_rsb8b")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.3, 0, 9)
+
+[node name="building-a2" parent="map/Builds/Suburbs2" instance=ExtResource("9_tn53r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.15, 0, 10)
+
+[node name="building-d2" parent="map/Builds/Suburbs2" instance=ExtResource("10_0ulum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2, 0, 10.95)
+
+[node name="building-e2" parent="map/Builds/Suburbs2" instance=ExtResource("11_6t4r8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2, 0, 12.3)
+
+[node name="building-f2" parent="map/Builds/Suburbs2" instance=ExtResource("12_nbi14")]
+transform = Transform3D(-5.68248e-08, 0, 1, 0, 1, 0, -1.3, 0, -4.37114e-08, 19.25, 0, 13.75)
+
+[node name="building-f3" parent="map/Builds/Suburbs2" instance=ExtResource("12_nbi14")]
+transform = Transform3D(-4.80825e-08, 0, 1, 0, 1, 0, -1.1, 0, -4.37114e-08, 19.25, 0, 14.71)
+
+[node name="Suburbs3" type="Node3D" parent="map/Builds"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 88, 0, 63)
+
+[node name="building-k2" parent="map/Builds/Suburbs3" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(1.78873e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.78873e-08, 20, 0, 14)
+
+[node name="building-k3" parent="map/Builds/Suburbs3" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(1.78873e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.78873e-08, 20, 0, 11)
+
+[node name="building-l2" parent="map/Builds/Suburbs3" instance=ExtResource("14_caqhx")]
+transform = Transform3D(2.14648e-08, 0, -1.8, 0, 1.8, 0, 1.8, 0, 2.14648e-08, 19.6, 0, 8)
+
+[node name="building-e2" parent="map/Builds/Suburbs3" instance=ExtResource("11_6t4r8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.75, 0, 7.8)
+
+[node name="building-skyscraper-b2" parent="map/Builds/Suburbs3" instance=ExtResource("15_2ba2b")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 18.3, 0, 10.3)
+
+[node name="building-k4" parent="map/Builds/Suburbs3" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 18.5, 0, 13.5)
+
+[node name="Suburbs4" type="Node3D" parent="map/Builds"]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 16, 0, 2)
+
+[node name="building-k2" parent="map/Builds/Suburbs4" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(1.78873e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.78873e-08, 20, 0, 14)
+
+[node name="building-k3" parent="map/Builds/Suburbs4" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(1.78873e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.78873e-08, 20, 0, 11)
+
+[node name="building-l2" parent="map/Builds/Suburbs4" instance=ExtResource("14_caqhx")]
+transform = Transform3D(2.14648e-08, 0, -1.8, 0, 1.8, 0, 1.8, 0, 2.14648e-08, 19.6, 0, 8)
+
+[node name="building-e2" parent="map/Builds/Suburbs4" instance=ExtResource("11_6t4r8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.75, 0, 7.8)
+
+[node name="building-skyscraper-d2" parent="map/Builds/Suburbs4" instance=ExtResource("15_ep2gn")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 18, 0, 10.3)
+
+[node name="building-k4" parent="map/Builds/Suburbs4" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 18.5, 0, 13.5)
+
+[node name="Suburbs5" type="Node3D" parent="map/Builds"]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -1.1, 0, 20)
+
+[node name="building-skyscraper-d2" parent="map/Builds/Suburbs5" instance=ExtResource("15_ep2gn")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 18.8, 0, 8.1)
+
+[node name="building-n2" parent="map/Builds/Suburbs5" instance=ExtResource("16_6if5w")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 18.8, 0, 12.2)
+
+[node name="building-k3" parent="map/Builds/Suburbs5" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(-1.7, 0, -1.48619e-07, 0, 1.7, 0, 1.48619e-07, 0, -1.7, 19, 0, 15.3)
+
+[node name="Suburbs6" type="Node3D" parent="map/Builds"]
+transform = Transform3D(-1.8, 0, -1.57361e-07, 0, 1.8, 0, 1.57361e-07, 0, -1.8, 53.6, 0, 60.6)
+
+[node name="building-skyscraper-d2" parent="map/Builds/Suburbs6" instance=ExtResource("15_ep2gn")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 18.8, 0, 8.1)
+
+[node name="building-n2" parent="map/Builds/Suburbs6" instance=ExtResource("16_6if5w")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 18.8, 0, 12.2)
+
+[node name="building-k3" parent="map/Builds/Suburbs6" instance=ExtResource("13_ubdhp")]
+transform = Transform3D(-1.7, 0, -1.48619e-07, 0, 1.7, 0, 1.48619e-07, 0, -1.7, 19, 0, 15.3)
 
 [node name="Roads" type="Node3D" parent="map"]
 
@@ -836,93 +931,129 @@ transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 54, 0, 3
 [node name="road-intersection-path5" parent="map/Roads/Blocks/Block4" instance=ExtResource("20_2k10i")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23.5, 0, 31)
 
-[node name="road-curve-intersection2" parent="map" instance=ExtResource("22_6ij4o")]
+[node name="road-curve-intersection2" parent="map/Roads" instance=ExtResource("22_6ij4o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5, 0, -9)
 
-[node name="curvy_wurvy2" type="Node3D" parent="map"]
+[node name="curvy_wurvy8" type="Node3D" parent="map/Roads"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, -5.5)
 
-[node name="road-curve4" parent="map/curvy_wurvy2" instance=ExtResource("8_ip3f0")]
+[node name="road-curve4" parent="map/Roads/curvy_wurvy8" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
 
-[node name="road-curve3" parent="map/curvy_wurvy2" instance=ExtResource("8_ip3f0")]
+[node name="road-curve3" parent="map/Roads/curvy_wurvy8" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
 
-[node name="road-straight2" parent="map" instance=ExtResource("7_3drvw")]
+[node name="road-straight24" parent="map/Roads" instance=ExtResource("7_3drvw")]
 transform = Transform3D(-4.37114e-07, 0, 1, 0, 1, 0, -10, 0, -4.37114e-08, 28, 0, 0)
 
-[node name="road-curve3" parent="map" instance=ExtResource("8_ip3f0")]
+[node name="road-curve10" parent="map/Roads" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.5, 0, 6)
 
-[node name="road-curve4" parent="map" instance=ExtResource("8_ip3f0")]
+[node name="road-curve11" parent="map/Roads" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 30.5, 0, 6)
 
-[node name="road-straight3" parent="map" instance=ExtResource("7_3drvw")]
+[node name="road-straight25" parent="map/Roads" instance=ExtResource("7_3drvw")]
 transform = Transform3D(-7.86805e-07, 0, 1, 0, 1, 0, -18, 0, -4.37114e-08, 34, 0, -7)
 
-[node name="curvy_wurvy3" type="Node3D" parent="map"]
+[node name="curvy_wurvy9" type="Node3D" parent="map/Roads"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, 3)
 
-[node name="road-curve4" parent="map/curvy_wurvy3" instance=ExtResource("8_ip3f0")]
+[node name="road-curve4" parent="map/Roads/curvy_wurvy9" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.5)
 
-[node name="road-curve3" parent="map/curvy_wurvy3" instance=ExtResource("8_ip3f0")]
+[node name="road-curve3" parent="map/Roads/curvy_wurvy9" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 3.5)
 
-[node name="road-bend-square4" parent="map" instance=ExtResource("15_kcvvq")]
+[node name="road-bend-square4" parent="map/Roads" instance=ExtResource("15_kcvvq")]
 transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 31, 0, -19.5)
 
-[node name="road-straight19" parent="map" instance=ExtResource("7_3drvw")]
+[node name="road-straight26" parent="map/Roads" instance=ExtResource("7_3drvw")]
 transform = Transform3D(-5, 0, -8.74228e-08, 0, 1, 0, 4.37114e-07, 0, -1, 28, 0, -19.5)
 
-[node name="curvy_wurvy4" type="Node3D" parent="map"]
+[node name="curvy_wurvy10" type="Node3D" parent="map/Roads"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28, 0, -16.5)
 
-[node name="road-curve4" parent="map/curvy_wurvy4" instance=ExtResource("8_ip3f0")]
+[node name="road-curve4" parent="map/Roads/curvy_wurvy10" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0, 5.5)
 
-[node name="road-curve3" parent="map/curvy_wurvy4" instance=ExtResource("8_ip3f0")]
+[node name="road-curve3" parent="map/Roads/curvy_wurvy10" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 0, 3.5)
 
-[node name="road-straight4" parent="map" instance=ExtResource("7_3drvw")]
+[node name="road-straight27" parent="map/Roads" instance=ExtResource("7_3drvw")]
 transform = Transform3D(-7.21238e-07, 0, 1, 0, 1, 0, -16.5, 0, -4.37114e-08, 4, 0, -13.75)
 
-[node name="curvy_wurvy6" type="Node3D" parent="map"]
+[node name="curvy_wurvy11" type="Node3D" parent="map/Roads"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18, 0, -19)
 
-[node name="road-curve4" parent="map/curvy_wurvy6" instance=ExtResource("8_ip3f0")]
+[node name="road-curve4" parent="map/Roads/curvy_wurvy11" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 6.5)
 
-[node name="road-curve3" parent="map/curvy_wurvy6" instance=ExtResource("8_ip3f0")]
+[node name="road-curve3" parent="map/Roads/curvy_wurvy11" instance=ExtResource("8_ip3f0")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3, 0, 5.5)
 
-[node name="road-straight5" parent="map" instance=ExtResource("7_3drvw")]
+[node name="road-straight28" parent="map/Roads" instance=ExtResource("7_3drvw")]
 transform = Transform3D(18, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -22.5)
 
-[node name="road-bend-square2" parent="map" instance=ExtResource("15_kcvvq")]
+[node name="road-bend-square5" parent="map/Roads" instance=ExtResource("15_kcvvq")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -22.5)
 
-[node name="road-straight26" parent="map" instance=ExtResource("7_3drvw")]
+[node name="road-straight29" parent="map/Roads" instance=ExtResource("7_3drvw")]
 transform = Transform3D(-7.43094e-07, 0, 1, 0, 1, 0, -17, 0, -4.37114e-08, 41.5, 0, 22)
 
-[node name="SUburb_divider" type="Node3D" parent="map"]
+[node name="SUburb_divider" type="Node3D" parent="map/Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, 13)
 
-[node name="road-intersection-path3" parent="map/SUburb_divider" instance=ExtResource("20_2k10i")]
+[node name="road-intersection-path3" parent="map/Roads/SUburb_divider" instance=ExtResource("20_2k10i")]
 
-[node name="road-straight23" parent="map/SUburb_divider" instance=ExtResource("7_3drvw")]
+[node name="road-straight23" parent="map/Roads/SUburb_divider" instance=ExtResource("7_3drvw")]
 transform = Transform3D(5.5, 0, 0, 0, 1, 0, 0, 0, 1, -3.25, 0, 0)
 
-[node name="SUburb_divider2" type="Node3D" parent="map"]
+[node name="SUburb_divider2" type="Node3D" parent="map/Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, 31)
 
-[node name="road-intersection-path3" parent="map/SUburb_divider2" instance=ExtResource("20_2k10i")]
+[node name="road-intersection-path3" parent="map/Roads/SUburb_divider2" instance=ExtResource("20_2k10i")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="road-straight23" parent="map/SUburb_divider2" instance=ExtResource("7_3drvw")]
+[node name="road-straight23" parent="map/Roads/SUburb_divider2" instance=ExtResource("7_3drvw")]
 transform = Transform3D(3.6, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0, 0)
 
 [node name="Game" parent="." node_paths=PackedStringArray("ui") instance=ExtResource("29_tn53r")]
 ui = NodePath("../in_game_ui")
 
 [node name="in_game_ui" parent="." instance=ExtResource("30_0ulum")]
+
+[node name="Zombie" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 454, 0, 496)
+
+[node name="Zombie2" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306, 10, 69)
+
+[node name="Zombie3" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283, 0, 495)
+
+[node name="Zombie4" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 337, 0, -146)
+
+[node name="Zombie5" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 244, 10, 74)
+
+[node name="Zombie6" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 264, 10, 72)
+
+[node name="Zombie7" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 232, 10, 78)
+
+[node name="Zombie8" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 124)
+
+[node name="Zombie9" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 188, 10, 74)
+
+[node name="Zombie10" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256, 0, -102)
+
+[node name="Zombie11" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 56)
+
+[node name="Zombie12" parent="." instance=ExtResource("31_0ulum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 228, 0, -223)
