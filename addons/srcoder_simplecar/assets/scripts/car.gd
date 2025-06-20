@@ -49,6 +49,9 @@ func _physics_process(delta: float) -> void:
 		#linearly reduce engine force based on the wheels current rpm and the player input
 		var actual_force : float = player_acceleration * ((-max_torque/max_wheel_rpm) * abs(wheel.get_rpm()) + max_torque) 
 		wheel.engine_force = actual_force
+	#adjust the audio pitch scale between 0.2 and 1.2 based on rpm percentage of max
+	var pitch = abs((driving_wheels[0].get_rpm() / max_wheel_rpm) + 0.2)
+	$engine_audio.pitch_scale = pitch
 
 
 ## sets the variables player_steer, player_brake and player_acceleration based on the player input

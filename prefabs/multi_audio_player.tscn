@@ -1,0 +1,15 @@
+[gd_scene load_steps=9 format=3 uid="uid://na7ytub05nd6"]
+
+[ext_resource type="Script" uid="uid://chbgcwedj4idl" path="res://scripts/multi_audio_player.gd" id="1_48hve"]
+[ext_resource type="AudioStream" uid="uid://b8t3x4e5eojva" path="res://audio/grunt1.wav" id="2_2drq1"]
+[ext_resource type="AudioStream" uid="uid://b2b165vsegxog" path="res://audio/beheading-sfx-84656.mp3" id="3_wajl5"]
+[ext_resource type="AudioStream" uid="uid://c8tv8upg4jef5" path="res://audio/fatal-body-fall-thud-352716.mp3" id="4_2bwsf"]
+[ext_resource type="AudioStream" uid="uid://wxeghdkcjt7d" path="res://audio/flesh-impact-266316.mp3" id="5_tnus3"]
+[ext_resource type="AudioStream" uid="uid://bojnd1uclp6my" path="res://audio/gib-sound-97000.mp3" id="6_fdm40"]
+[ext_resource type="AudioStream" uid="uid://cbymt1lg0tnhp" path="res://audio/very-loud-eviscerating-2-89000.mp3" id="7_go3lf"]
+[ext_resource type="AudioStream" uid="uid://d2c3n3uj01wti" path="res://audio/very-loud-splat-88998.mp3" id="8_noq8s"]
+
+[node name="multi_audio_player" type="AudioStreamPlayer3D"]
+stream = ExtResource("2_2drq1")
+script = ExtResource("1_48hve")
+sounds = Array[AudioStream]([ExtResource("3_wajl5"), ExtResource("4_2bwsf"), ExtResource("5_tnus3"), ExtResource("6_fdm40"), ExtResource("7_go3lf"), ExtResource("8_noq8s")])

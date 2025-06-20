@@ -1,7 +1,86 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpa60otc41nh0"]
+[gd_scene load_steps=4 format=3 uid="uid://cpa60otc41nh0"]
 
 [ext_resource type="Script" uid="uid://bhbix6d72b8ts" path="res://scripts/game.gd" id="1_qyo8t"]
+[ext_resource type="Theme" uid="uid://f3b0gpq4f0ef" path="res://ui/zombie_ui.theme" id="2_ipu8a"]
+[ext_resource type="Script" uid="uid://dnqxaed2r2jvx" path="res://ui/scenes/in_game_ui.gd" id="3_qknjy"]
 
 [node name="Game" type="Node" node_paths=PackedStringArray("ui")]
 script = ExtResource("1_qyo8t")
-ui = NodePath("")
+ui = NodePath("in_game_ui")
+
+[node name="in_game_ui" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ipu8a")
+script = ExtResource("3_qknjy")
+
+[node name="Panel" type="Panel" parent="in_game_ui"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="TimeLabel" type="Label" parent="in_game_ui/Panel"]
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 50.0
+text = "1:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="in_game_ui/Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_bottom = 50.0
+grow_horizontal = 0
+text = "Score: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="in_game_ui"]
+autostart = true
+
+[node name="WinPanel" type="Panel" parent="in_game_ui"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="in_game_ui/WinPanel"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 354.0
+offset_right = 662.0
+offset_bottom = 388.0
+text = "You Win!!!!"
+
+[node name="LosePanel" type="Panel" parent="in_game_ui"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="in_game_ui/LosePanel"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 354.0
+offset_right = 662.0
+offset_bottom = 388.0
+text = "You Lost :("
+
+[connection signal="timeout" from="in_game_ui/Timer" to="." method="_on_timer_timeout"]

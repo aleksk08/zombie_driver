@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=4 uid="uid://7l1irinimxa"]
+[gd_scene load_steps=19 format=4 uid="uid://7l1irinimxa"]
 
 [ext_resource type="Texture2D" uid="uid://dj84l2dmpnyxp" path="res://addons/srcoder_simplecar/assets/models/Textures/colormap.png" id="1_n0mcw"]
 [ext_resource type="PhysicsMaterial" uid="uid://cuw7isymmyyku" path="res://addons/srcoder_simplecar/assets/materials/metal_physics_material.phymat" id="1_vukum"]
 [ext_resource type="Script" uid="uid://co32c820r2kpq" path="res://addons/srcoder_simplecar/assets/scripts/car.gd" id="1_ymx53"]
+[ext_resource type="AudioStream" uid="uid://u6ree454pjxi" path="res://audio/engine-idle.mp3" id="4_0vicd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bwqi7"]
 resource_name = "colormap"
@@ -293,3 +294,9 @@ damping_relaxation = 2.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 0.00257409)
 mesh = SubResource("ArrayMesh_h7tpb")
 skeleton = NodePath("")
+
+[node name="engine_audio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_0vicd")
+volume_db = -21.333
+pitch_scale = 0.2
+autoplay = true

@@ -43,4 +43,38 @@ vertical_alignment = 1
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="WinPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="WinPanel"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 354.0
+offset_right = 662.0
+offset_bottom = 388.0
+text = "You Win!!!!"
+
+[node name="LosePanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="LosePanel"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 354.0
+offset_right = 662.0
+offset_bottom = 388.0
+text = "You Lost :("
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
