@@ -1,6 +1,7 @@
 extends Node
 
 @export var level_time := 120
+@onready var time_left := level_time
 var zombies : Array[Node]
 
 @export var ui : IngameUI
@@ -10,18 +11,15 @@ var total_num_zombies
 var playing = true
 
 @onready var time_label : Label = $in_game_ui/Panel/TimeLabel
-@onready var score_label : Label = $in_game_ui/Panel/ScoreLabel
 @onready var win_panel : Panel = $in_game_ui/WinPanel
 @onready var lose_panel : Panel = $in_game_ui/LosePanel
 
 func _ready() -> void:
 	zombies = get_tree().get_nodes_in_group("zombies")
-	total_num_zombies = len(zombies)
-	score = total_num_zombies
-	set_score_text()
 	for zombie in zombies:
 		var z : Zombie = zombie
 		z.ragdoll_activated.connect(zombie_killed)
+	_set_label_text()
 	#hide the win and lose
 	win_panel.hide()
 	lose_panel.hide()
@@ -29,30 +27,29 @@ func _ready() -> void:
 
 func zombie_killed():
 	print("Zombie Killed")
-	score -= 1
-	ui.set_score_label(score)
-	#win scene!
-	if score <= 0 and playing:
-		print("You win!")
-		playing = false
-		win_panel.show()
-		await get_tree().create_timer(3).timeout
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-
+	time_left += 10
+	
+	
 func _set_label_text():
-	var m = level_time / 60
-	var s = level_time % 60
-	time_label.text = (str(m)+":"+str(s))
+	var m = time_left / 60
+	var s = time_left % 60
+	time_label.text = ("%02d:%02d" % [m,s])
 
-func set_score_text():
-	score_label.text = "Score: "+str(score)
 
 func _on_timer_timeout() -> void:
-	level_time -= 1
+	time_left -= 1
 	_set_label_text()
-	if level_time <= 0 and playing:
+	if time_left <= 0 and playing:
 		#we lost
 		playing = false
 		lose_panel.show()
 		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _on_player_reached_destination() -> void:
+	print("You win!!")
+	playing = false
+	win_panel.show()
+	await get_tree().create_timer(3).timeout
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

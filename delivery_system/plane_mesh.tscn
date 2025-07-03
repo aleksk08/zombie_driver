@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkx5fmfjoolai"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wd51"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0.231373)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+disable_receive_shadows = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dpsp7"]
+material = SubResource("StandardMaterial3D_3wd51")
+
+[node name="plane_mesh" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_dpsp7")

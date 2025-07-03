@@ -3,7 +3,7 @@ class_name Player
 
 @export_category("Car Settings")
 ## max steer in radians for the front wheels- defaults to 0.45
-@export var max_steer : float = 0.45
+@export var max_steer : float = 0.80
 ## the maximum torque that the engine will sent to the rear wheels- defaults to 300
 @export var max_torque : float = 300.0
 ## the maximum amount of braking force applied to the wheel. Default is 1.0
@@ -12,12 +12,13 @@ class_name Player
 ## The default value is 600rpm
 @export var max_wheel_rpm : float = 600.0
 ## How quickly the wheel responds to player input- equates to seconds to reach maximum steer. Default is 2.0
-@export var steer_damping = 2.0
+@export var steer_damping = 6.0
 ## How sticky are the front wheels. Default is 5. 0 is frictionless._add_constant_central_force
-@export var front_wheel_grip : float = 5.0
+@export var front_wheel_grip : float = 2.0
 ## How sticky are the rear wheel. Default is 5. Try lower value for a more drift experience
-@export var rear_wheel_grip : float = 5.0
-
+@export var rear_wheel_grip : float = 2.0
+## How much the acceleration is damped- 1 is default- higher values move wuicker to max acceleration
+@export var player_acceleration_damping : float = 1.0
 
 #local member variables
 var player_acceleration : float = 0.0
@@ -63,7 +64,7 @@ func get_input(delta : float):
 	player_input.y = Input.get_axis("down","up")
 	if player_input.y > 0.01:
 		#accelerating
-		player_acceleration = player_input.y
+		player_acceleration = move_toward(player_acceleration,player_input.y,player_acceleration_damping * delta)
 		player_braking = 0.0
 	elif player_input.y < -0.01:
 		#we are trying to brake or reverse

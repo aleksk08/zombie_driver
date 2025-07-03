@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://rx3we6snr1ht"
+uid="uid://c8ec12xgyjh5r"
 path="res://.godot/imported/CarModelWithWheels.fbx-1bf9624e720eb4b1013312f7b6a79635.scn"
 
 [deps]
@@ -32,15 +32,7 @@ animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Car": {
-"generate/physics": true,
-"physics/body_type": 1,
-"physics/shape_type": 1
-}
-}
-}
+_subresources={}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

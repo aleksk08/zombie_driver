@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dun8xojj4a8b6"]
+
+[ext_resource type="Script" uid="uid://duicbrx6f2fok" path="res://delivery_system/delivery_system.gd" id="1_7qy2y"]
+[ext_resource type="ArrayMesh" uid="uid://bft5wkiqpoog5" path="res://delivery_system/destination.obj" id="1_c5m2a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qy2y"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+disable_receive_shadows = true
+
+[sub_resource type="Curve" id="Curve_p7rll"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_x0otp"]
+curve = SubResource("Curve_p7rll")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qruhk"]
+gravity = Vector3(0, 1, 0)
+alpha_curve = SubResource("CurveTexture_x0otp")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c5m2a"]
+size = Vector3(3, 3, 5)
+
+[node name="delivery_system" type="Node3D" groups=["destination"]]
+script = ExtResource("1_7qy2y")
+metadata/_edit_group_ = true
+
+[node name="Destination" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="destination_mesh" type="MeshInstance3D" parent="Destination"]
+mesh = ExtResource("1_c5m2a")
+skeleton = NodePath("../..")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Destination/destination_mesh"]
+material_override = SubResource("StandardMaterial3D_7qy2y")
+amount = 5
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_qruhk")
+draw_pass_1 = ExtResource("1_c5m2a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Destination"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_c5m2a")
+
+[connection signal="body_entered" from="Destination" to="." method="_on_destination_body_entered"]

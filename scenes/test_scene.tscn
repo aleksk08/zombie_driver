@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ds2o0udtwkwqy"]
+[gd_scene load_steps=11 format=3 uid="uid://ds2o0udtwkwqy"]
 
 [ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="1_g7g4h"]
-[ext_resource type="PackedScene" uid="uid://7l1irinimxa" path="res://addons/srcoder_simplecar/car.tscn" id="2_j8ivh"]
+[ext_resource type="PackedScene" uid="uid://bcpshkphq45se" path="res://delivery_system/compass.tscn" id="4_3qnke"]
 [ext_resource type="PackedScene" uid="uid://d2dqipnn8e4eo" path="res://prefabs/zombie_ragdoll.tscn" id="4_7ddre"]
 [ext_resource type="PackedScene" uid="uid://cpa60otc41nh0" path="res://prefabs/game.tscn" id="5_3qnke"]
+[ext_resource type="PackedScene" uid="uid://bwsoo7hi84lf5" path="res://addons/srcoder_simplecar/new_car.tscn" id="5_qjeyg"]
 [ext_resource type="PackedScene" uid="uid://rjx8tx5y7j2p" path="res://addons/srcoder_simplecar/follow_camera.tscn" id="6_3qnke"]
+[ext_resource type="PackedScene" uid="uid://dun8xojj4a8b6" path="res://delivery_system/delivery_system.tscn" id="7_wtsjf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nd71p"]
 
@@ -23,22 +25,6 @@ glow_enabled = true
 
 [node name="test_scene" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-material_override = ExtResource("1_g7g4h")
-use_collision = true
-size = Vector3(100, 1, 100)
-
-[node name="car" parent="." instance=ExtResource("2_j8ivh")]
-physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -35.9103)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_7ddre")
-
 [node name="Zombie" parent="." instance=ExtResource("4_7ddre")]
 transform = Transform3D(-0.986349, 0, -0.164669, 0, 1, 0, 0.164669, 0, -0.986349, -0.645239, 0.508696, 11.0765)
 
@@ -51,7 +37,91 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02541, 0.508696, 7.83879)
 [node name="Zombie4" parent="." instance=ExtResource("4_7ddre")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49423, 0.508696, 12.7106)
 
+[node name="Game" parent="." instance=ExtResource("5_3qnke")]
+
+[node name="car" parent="." instance=ExtResource("5_qjeyg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.721187, 3.29824, -33.9825)
+
+[node name="compass" parent="car" node_paths=PackedStringArray("destination") instance=ExtResource("4_3qnke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.38419e-07, 0)
+destination = NodePath("../../delivery_system")
+
 [node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("6_3qnke")]
 follow_target = NodePath("../car")
+camera_height = 3.0
+camera_distance = 6.0
+rotation_damping = 3.0
 
-[node name="Game" parent="." instance=ExtResource("5_3qnke")]
+[node name="Map" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map"]
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -99.92)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.0633, 0, 0)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.0633, 0, 100)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.0633, 0, -99.92)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.9367, 0, 0)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.9367, 0, 100)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.9367, 0, -99.92)
+material_override = ExtResource("1_g7g4h")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Map"]
+environment = SubResource("Environment_7ddre")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 16, -1, -3.5)
+use_collision = true
+size = Vector3(5, 5, 8)
+
+[node name="delivery_system" parent="." instance=ExtResource("7_wtsjf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 1, 41)
+
+[connection signal="player_entered_destination" from="delivery_system" to="Game" method="_on_player_reached_destination"]
+
+[editable path="car"]
