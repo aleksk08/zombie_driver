@@ -337,7 +337,8 @@ shape = SubResource("BoxShape3D_a1pdc")
 shape = SubResource("BoxShape3D_uebvj")
 
 [node name="car" parent="." instance=ExtResource("11_en26y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -99.2109)
+max_brake_force = 5.0
 
 [node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("12_a1pdc")]
 follow_target = NodePath("../car")
