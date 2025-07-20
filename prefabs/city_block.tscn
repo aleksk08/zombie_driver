@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cydjh3bsa4v35"]
+[gd_scene load_steps=13 format=3 uid="uid://cydjh3bsa4v35"]
 
 [ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="1_dc7y7"]
 [ext_resource type="Material" uid="uid://bh4wilkhdydtk" path="res://materials/concrete.tres" id="1_xbdpg"]
@@ -10,22 +10,6 @@
 [ext_resource type="ArrayMesh" uid="uid://b3k11r6f5xcj8" path="res://city/city_kit/Models/OBJ format/building-skyscraper-c.obj" id="8_uebvj"]
 [ext_resource type="ArrayMesh" uid="uid://bfk3hlvic05q8" path="res://city/city_kit/Models/OBJ format/building-skyscraper-e.obj" id="9_hc2xk"]
 [ext_resource type="ArrayMesh" uid="uid://bfe6q4rydf2pr" path="res://city/city_kit/Models/OBJ format/building-skyscraper-d.obj" id="10_1fbwv"]
-[ext_resource type="PackedScene" uid="uid://bwsoo7hi84lf5" path="res://addons/srcoder_simplecar/new_car.tscn" id="11_en26y"]
-[ext_resource type="PackedScene" uid="uid://rjx8tx5y7j2p" path="res://addons/srcoder_simplecar/follow_camera.tscn" id="12_a1pdc"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a1pdc"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_uebvj"]
-sky_material = SubResource("ProceduralSkyMaterial_a1pdc")
-
-[sub_resource type="Environment" id="Environment_hc2xk"]
-background_mode = 2
-sky = SubResource("Sky_uebvj")
-tonemap_mode = 2
-ssao_enabled = true
-glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a1pdc"]
 size = Vector3(7, 6, 7)
@@ -34,14 +18,6 @@ size = Vector3(7, 6, 7)
 size = Vector3(15, 0.05, 15)
 
 [node name="CityBlock" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_hc2xk")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-shadow_enabled = true
-shadow_opacity = 0.7
 
 [node name="Ground" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -335,10 +311,3 @@ shape = SubResource("BoxShape3D_a1pdc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/StaticBody3D2"]
 shape = SubResource("BoxShape3D_uebvj")
-
-[node name="car" parent="." instance=ExtResource("11_en26y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -99.2109)
-max_brake_force = 5.0
-
-[node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("12_a1pdc")]
-follow_target = NodePath("../car")
