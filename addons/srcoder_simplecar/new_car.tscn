@@ -193,10 +193,14 @@ points = PackedVector3Array(0.00620286, 0.013441, 0.0155667, -0.0116048, -0.0051
 collision_layer = 2
 physics_material_override = ExtResource("1_8mpdd")
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0.25, 0)
+center_of_mass = Vector3(0, 0.1, 0)
 script = ExtResource("2_rpsmc")
-max_torque = 600.0
-front_wheel_grip = 3.0
+max_steer = 0.7
+max_torque = 1200.0
+max_wheel_rpm = 1200.0
+steer_damping = 2.0
+front_wheel_grip = 6.0
+rear_wheel_grip = 5.0
 
 [node name="WheelBackRight" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85, 0.425, -1.5215)
