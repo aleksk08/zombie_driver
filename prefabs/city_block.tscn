@@ -153,6 +153,10 @@ mesh = ExtResource("5_4ux66")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 7)
 mesh = ExtResource("5_4ux66")
 
+[node name="Building-c13" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.8125, 0, 7)
+mesh = ExtResource("5_4ux66")
+
 [node name="Building-skyscraper-a" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75, 0, 1.25)
 mesh = ExtResource("6_en26y")
@@ -169,12 +173,56 @@ mesh = ExtResource("7_a1pdc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 0, 1.25)
 mesh = ExtResource("8_uebvj")
 
+[node name="Building-c14" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.59375, 0, -6.84375)
+mesh = ExtResource("5_4ux66")
+
+[node name="Building-skyscraper-a6" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.84375, 0, -6.84375)
+mesh = ExtResource("6_en26y")
+
+[node name="Building-skyscraper-b14" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.84375, 0, -6.84375)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-c8" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.34375, 0, -6.84375)
+mesh = ExtResource("8_uebvj")
+
+[node name="Building-c9" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6.84375)
+mesh = ExtResource("5_4ux66")
+
+[node name="Building-skyscraper-a5" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75, 0, -6.84375)
+mesh = ExtResource("6_en26y")
+
+[node name="Building-skyscraper-b9" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, 0, -6.84375)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-c5" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 0, -6.84375)
+mesh = ExtResource("8_uebvj")
+
 [node name="Building-skyscraper-e" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.25, 0, 2.75)
 mesh = ExtResource("9_hc2xk")
 
 [node name="Building-skyscraper-e2" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.25, 0, 5.75)
+mesh = ExtResource("9_hc2xk")
+
+[node name="Building-skyscraper-b12" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.8125, 0, 4.25)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-e11" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.8125, 0, 2.75)
+mesh = ExtResource("9_hc2xk")
+
+[node name="Building-skyscraper-e12" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.8125, 0, 5.75)
 mesh = ExtResource("9_hc2xk")
 
 [node name="Building-skyscraper-d" type="MeshInstance3D" parent="Meshes"]
@@ -205,12 +253,52 @@ mesh = ExtResource("7_a1pdc")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.11111, 0, -5.36111)
 mesh = ExtResource("8_uebvj")
 
+[node name="Building-c15" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.79514, 0, -4.11111)
+mesh = ExtResource("5_4ux66")
+
+[node name="Building-skyscraper-b15" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.79514, 0, -2.86111)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-c9" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.79514, 0, -5.36111)
+mesh = ExtResource("8_uebvj")
+
+[node name="Building-c16" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.82986, 0, -4.11111)
+mesh = ExtResource("5_4ux66")
+
+[node name="Building-skyscraper-b16" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.82986, 0, -2.86111)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-c10" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.82986, 0, -5.36111)
+mesh = ExtResource("8_uebvj")
+
 [node name="Building-skyscraper-e7" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.61111, 0, -1.36111)
 mesh = ExtResource("9_hc2xk")
 
 [node name="Building-skyscraper-e8" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.61111, 0, -1.36111)
+mesh = ExtResource("9_hc2xk")
+
+[node name="Building-c10" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.86111, 0, 6.95139)
+mesh = ExtResource("5_4ux66")
+
+[node name="Building-skyscraper-b10" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.11111, 0, 6.70139)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-e9" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.61111, 0, 6.70139)
+mesh = ExtResource("9_hc2xk")
+
+[node name="Building-skyscraper-e10" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.61111, 0, 6.70139)
 mesh = ExtResource("9_hc2xk")
 
 [node name="Building-skyscraper-d4" type="MeshInstance3D" parent="Meshes"]
@@ -239,6 +327,18 @@ mesh = ExtResource("7_a1pdc")
 
 [node name="Building-skyscraper-c2" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.11111, 0, 5.13889)
+mesh = ExtResource("8_uebvj")
+
+[node name="Building-c11" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.82639, 0, 3.88889)
+mesh = ExtResource("5_4ux66")
+
+[node name="Building-skyscraper-b11" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.82639, 0, 2.63889)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-c6" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.82639, 0, 5.13889)
 mesh = ExtResource("8_uebvj")
 
 [node name="Building-skyscraper-e3" type="MeshInstance3D" parent="Meshes"]
@@ -275,6 +375,18 @@ mesh = ExtResource("7_a1pdc")
 
 [node name="Building-skyscraper-c3" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -5.25, 0, -1.22222)
+mesh = ExtResource("8_uebvj")
+
+[node name="Building-c12" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4, 0, 6.71528)
+mesh = ExtResource("5_4ux66")
+
+[node name="Building-skyscraper-b13" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.75, 0, 6.71528)
+mesh = ExtResource("7_a1pdc")
+
+[node name="Building-skyscraper-c7" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -5.25, 0, 6.71528)
 mesh = ExtResource("8_uebvj")
 
 [node name="Building-skyscraper-e5" type="MeshInstance3D" parent="Meshes"]
