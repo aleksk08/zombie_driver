@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3edun57tjkp0"]
+[gd_scene load_steps=11 format=3 uid="uid://c3edun57tjkp0"]
 
 [ext_resource type="PackedScene" uid="uid://rjx8tx5y7j2p" path="res://addons/srcoder_simplecar/follow_camera.tscn" id="3_atcic"]
-[ext_resource type="Material" uid="uid://8ylcw0h1lkhg" path="res://addons/kenney_prototype_tools/materials/orange/material_01.tres" id="10_ip3f0"]
+[ext_resource type="PackedScene" uid="uid://f2k3wy48sju0" path="res://prefabs/city_block.tscn" id="6_hgi8a"]
+[ext_resource type="PackedScene" uid="uid://dyka3w6jiwmpb" path="res://prefabs/city_block_three.tscn" id="7_cbyoo"]
 [ext_resource type="PackedScene" uid="uid://bwsoo7hi84lf5" path="res://addons/srcoder_simplecar/new_car.tscn" id="24_lpbf4"]
 [ext_resource type="PackedScene" uid="uid://bcpshkphq45se" path="res://delivery_system/compass.tscn" id="25_qug1i"]
 [ext_resource type="PackedScene" uid="uid://dun8xojj4a8b6" path="res://delivery_system/delivery_system.tscn" id="26_qug1i"]
@@ -29,12 +30,6 @@ environment = SubResource("Environment_xjct3")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-material_override = ExtResource("10_ip3f0")
-use_collision = true
-size = Vector3(650, 1, 1200)
-
 [node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("3_atcic")]
 follow_target = NodePath("../car")
 
@@ -51,6 +46,41 @@ destination = NodePath("../../delivery_system")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -600, 1, 41)
 
 [node name="Map" type="Node3D" parent="."]
+
+[node name="CityBlock" parent="Map" instance=ExtResource("6_hgi8a")]
+
+[node name="CityBlockThreeDirections" parent="Map" instance=ExtResource("7_cbyoo")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 480, 0, 0)
+
+[node name="CityBlockThreeDirections2" parent="Map" instance=ExtResource("7_cbyoo")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 480, 0, 480)
+
+[node name="CityBlock2" parent="Map" instance=ExtResource("6_hgi8a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 480)
+
+[node name="CityBlock3" parent="Map" instance=ExtResource("6_hgi8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 0)
+
+[node name="CityBlockThreeDirections3" parent="Map" instance=ExtResource("7_cbyoo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 0)
+
+[node name="CityBlockThreeDirections4" parent="Map" instance=ExtResource("7_cbyoo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 480)
+
+[node name="CityBlock4" parent="Map" instance=ExtResource("6_hgi8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 480)
+
+[node name="CityBlock5" parent="Map" instance=ExtResource("6_hgi8a")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, -480)
+
+[node name="CityBlock6" parent="Map" instance=ExtResource("6_hgi8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -480, 0, -480)
+
+[node name="CityBlockThreeDirections5" parent="Map" instance=ExtResource("7_cbyoo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, -480)
+
+[node name="CityBlockThreeDirections6" parent="Map" instance=ExtResource("7_cbyoo")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 960, 0, -480)
 
 [connection signal="player_entered_destination" from="delivery_system" to="Game" method="_on_player_reached_destination"]
 

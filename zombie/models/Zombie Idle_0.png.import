@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5spj8hs0fr6j"
+uid="uid://egws2qs8pcsq"
 path.s3tc="res://.godot/imported/Zombie Idle_0.png-7fb8ff30af11964a319399f1d6acacd2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ffe42dd8af13e5b9f31471d5f4354e85"
 }
 
 [deps]
