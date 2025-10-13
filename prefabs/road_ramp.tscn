@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbwbekar34qge"]
+
+[ext_resource type="PackedScene" uid="uid://ba3sojj645c0s" path="res://city/road_kit/Models/GLB format/road-slant.glb" id="1_jclqn"]
+
+[node name="road-slant2" instance=ExtResource("1_jclqn")]
+
+[node name="road-slant" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="road-slant2" parent="." index="1" instance=ExtResource("1_jclqn")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.775, 0, 0)

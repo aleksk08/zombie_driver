@@ -1,0 +1,179 @@
+[gd_scene load_steps=14 format=3 uid="uid://b3ob47kp7nfqw"]
+
+[ext_resource type="PackedScene" uid="uid://cpa60otc41nh0" path="res://prefabs/game.tscn" id="2_m3oxs"]
+[ext_resource type="PackedScene" uid="uid://bwsoo7hi84lf5" path="res://addons/srcoder_simplecar/new_car.tscn" id="3_xi688"]
+[ext_resource type="PackedScene" uid="uid://bcpshkphq45se" path="res://delivery_system/compass.tscn" id="4_4jnga"]
+[ext_resource type="PackedScene" uid="uid://f2k3wy48sju0" path="res://prefabs/city_block.tscn" id="5_2snle"]
+[ext_resource type="PackedScene" uid="uid://dun8xojj4a8b6" path="res://delivery_system/delivery_system.tscn" id="5_m3oxs"]
+[ext_resource type="PackedScene" uid="uid://dyka3w6jiwmpb" path="res://prefabs/city_block_three.tscn" id="6_njlwk"]
+[ext_resource type="PackedScene" uid="uid://dbwbekar34qge" path="res://prefabs/road_ramp.tscn" id="7_slvjj"]
+[ext_resource type="PackedScene" uid="uid://72b7x3w248lw" path="res://prefabs/construction_barrier.tscn" id="8_oq6qf"]
+[ext_resource type="PackedScene" uid="uid://cs2am74k6yp6y" path="res://prefabs/hard_slope.tscn" id="9_njlwk"]
+[ext_resource type="PackedScene" uid="uid://rjx8tx5y7j2p" path="res://addons/srcoder_simplecar/follow_camera.tscn" id="11_7jbqs"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slvjj"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_atcic"]
+sky_material = SubResource("ProceduralSkyMaterial_slvjj")
+
+[sub_resource type="Environment" id="Environment_oq6qf"]
+background_mode = 2
+sky = SubResource("Sky_atcic")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="city_2" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Game2" parent="." instance=ExtResource("2_m3oxs")]
+script = null
+
+[node name="car" parent="Game2" instance=ExtResource("3_xi688")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.298, 40)
+
+[node name="compass" parent="Game2/car" node_paths=PackedStringArray("destination") instance=ExtResource("4_4jnga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.38419e-07, 0)
+destination = NodePath("../delivery_system")
+
+[node name="delivery_system" parent="Game2/car" instance=ExtResource("5_m3oxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 600, 1, 420)
+
+[node name="Map" type="Node3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="CityBlock" parent="Map" instance=ExtResource("5_2snle")]
+
+[node name="CityBlock2" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 480)
+
+[node name="CityBlock3" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 0)
+
+[node name="CityBlock4" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 480)
+
+[node name="CityBlock5" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, -480)
+
+[node name="CityBlock6" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -480, 0, -480)
+
+[node name="CityBlock8" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, -480)
+
+[node name="CityBlock9" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 0)
+
+[node name="CityBlock7" parent="Map" instance=ExtResource("5_2snle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 480)
+
+[node name="edge" type="Node3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 960, 0, 480)
+
+[node name="CityBlockThreeDirections5" parent="Map/edge" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
+
+[node name="CityBlockThreeDirections3" parent="Map/edge" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
+
+[node name="CityBlockThreeDirections4" parent="Map/edge" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
+
+[node name="edge3" type="Node3D" parent="Map/edge"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -480, 0, -1440)
+
+[node name="CityBlockThreeDirections5" parent="Map/edge/edge3" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
+
+[node name="CityBlockThreeDirections3" parent="Map/edge/edge3" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
+
+[node name="CityBlockThreeDirections4" parent="Map/edge/edge3" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
+
+[node name="CityBlockThreeDirections6" parent="Map/edge/edge3" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -1440)
+
+[node name="edge4" type="Node3D" parent="Map/edge"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1920, 0, 480)
+
+[node name="CityBlockThreeDirections5" parent="Map/edge/edge4" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
+
+[node name="CityBlockThreeDirections3" parent="Map/edge/edge4" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
+
+[node name="CityBlockThreeDirections4" parent="Map/edge/edge4" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
+
+[node name="CityBlockThreeDirections6" parent="Map/edge/edge4" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -1440)
+
+[node name="road-slant2" parent="Map" instance=ExtResource("7_slvjj")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 7, 0, 5.24537e-07, 0, -6, -510, 0.2, -485)
+
+[node name="construction-barrier2" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -520, 0, -480)
+
+[node name="construction-barrier4" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 465, 0, -480)
+
+[node name="construction-barrier6" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, -480, 0, -150)
+
+[node name="construction-barrier7" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, -960, 0, 750)
+
+[node name="edge2" type="Node3D" parent="Map"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -960, 0, -480)
+
+[node name="CityBlockThreeDirections5" parent="Map/edge2" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
+
+[node name="CityBlockThreeDirections3" parent="Map/edge2" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
+
+[node name="CityBlockThreeDirections4" parent="Map/edge2" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
+
+[node name="CityBlockThreeDirections6" parent="Map/edge2" instance=ExtResource("6_njlwk")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1920, 0, 480)
+
+[node name="construction-barrier8" parent="Map/edge2" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 235, 0, -1440)
+
+[node name="CityBlockThreeDirections7" parent="Map/edge2" instance=ExtResource("6_njlwk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1920, 0, -1440)
+
+[node name="construction-barrier8" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, -480, 0, 750)
+
+[node name="construction-barrier9" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 20, 0, -480)
+
+[node name="construction-barrier10" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 20, 0, -960)
+
+[node name="road-slant3" parent="Map" instance=ExtResource("7_slvjj")]
+transform = Transform3D(20, 0, 5.68434e-14, 0, 20, 0, -5.68434e-14, 0, 20, -40, 0, -480)
+
+[node name="construction-barrier11" parent="Map" instance=ExtResource("8_oq6qf")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -20, 0, -480)
+
+[node name="wall_ramp" parent="." instance=ExtResource("9_njlwk")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 360, 1, -380)
+
+[node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("11_7jbqs")]
+follow_target = NodePath("../Game2/car")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_oq6qf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[editable path="Game2"]
+[editable path="Game2/car"]

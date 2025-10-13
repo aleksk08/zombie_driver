@@ -1,0 +1,156 @@
+[gd_scene load_steps=8 format=4 uid="uid://cs2am74k6yp6y"]
+
+[ext_resource type="Texture2D" uid="uid://dln6k41xlsg6v" path="res://city/road_kit/Models/GLB format/Textures/colormap.png" id="1_imfoe"]
+[ext_resource type="PackedScene" uid="uid://ba3sojj645c0s" path="res://city/road_kit/Models/GLB format/road-slant.glb" id="2_4j43r"]
+[ext_resource type="PackedScene" uid="uid://bap7rjeb7cxyh" path="res://city/road_kit/Models/GLB format/road-straight.glb" id="3_4j43r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52rdi"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_imfoe")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f7b0h"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.27, 1),
+"format": 34896613377,
+"index_count": 132,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgABAAMAAAAEAAMAAwAEAAUABQAEAAAABgAAAAIAAAAGAAUABQAGAAcABwAGAAIABwAIAAUACQADAAUACQAFAAgAAwAJAAIACgAIAAcACQAIAAoABwALAAoACwAHAAIACgALAAwADAALAAIADAANAAoACQAKAA0ADQAMAA4ADgAMAAIACQANAA8ADgAPAA0ADwAOABAAEAAOAAIACQAPABEAEAARAA8AEgAJABEAAgAJABIAEAACABMAEgATAAIAEQAQABQAEwAVABAAFQATABIAFAAQABUAFAAWABEAEgARABYAFgAUABUAEgAXABUAFQAXABYAFgAXABIA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD2EmXmAAAAAPYS//8AAAAAAAD//wAA////////AAD/////ZeYAAP//g/Zl5gAAAAB7CWXmAAAAAHsJzMwAAP//g/bMzAAA//8AAP//AAD//4P2joIAAAAAewmOggAAAAB7CXB9AAD//4P2cH0AAAAAewkyMwAA//+D9jIzAAAAAHsJmRkAAP//g/aZGQAA//8AAAAAAAAAAAAAAAAAAAAA9hKZGQAAAAD2EgAAAAD/////mRkAAP////8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cogiy"]
+resource_name = "road-slant_road-slant"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.27, 1),
+"attribute_data": PackedByteArray("//fN9f/3zfX/95j5//ez9//3s/f/97P3//ez9//3s/f/97P3//eY+f/3zfX/9831//fN9f/3Zcb/92XG//fN9f/3Zcb/95j5//eY+f/3zfX/9831//eY+f/3mPn/92XG//fN9f/3s/f/90vI//dlxv/3mPn/95j5//eY+f/3mPn/9831//dlxv/3Zcb/9831//dLyP/3s/f/9831//dlxv/3Zcb/92XG//dLyP/3mPn/90vI//dLyP/3S8j/90vI//dLyP/3mPn/92XG//dlxv9H/9//R//f/0f/3/9H/9//J//f/yf/3/8n/9//J//f/yf/3/8n/9//J//f/yf/3/8H/9//B//f/wf/3/8H/9//B//f/wf/3/8H/9//B//f"),
+"format": 34896613399,
+"index_count": 132,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIABAADAAIABQAEAAIABgAFAAIABwAGAAIACAAHAAIACAACAAkACQAKAAgACwAIAAoADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKwAoACoAKwAqACwAKwAsAC0AKwAtAC4AKwAuAC8AKwAvADAAMQArADAAMQAwADIAMgAzADEANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQA"),
+"material": SubResource("StandardMaterial3D_52rdi"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 72,
+"vertex_data": PackedByteArray("AAD2EmXm/78AAPYS////vwAAAAD///+/AAB7CWXm/78AAHsJzMz/vwAAewmOgv+/AAB7CXB9/78AAHsJMjP/vwAAewmZGf+/AAAAAAAA/78AAPYSAAD/vwAA9hKZGf+/AAD2EmXm0s//////ZebSz////////9LPAAD2Ev//0s////////8AgP//AAD//wCAAAAAAP//AIAAAPYS//8AgAAA9hIAAP//AAAAAAAA/////wAAAAD///////8AAP//AAD2EmXm//8AAHsJZeb/////g/Zl5v///////2Xm//8AAAAA////v///AAD///+///8AAAAA/78AAAAAAAD/vwAA9hIAANLP/////wAA0s//////mRnSzwAA9hKZGdLP//+D9pkZAIAAAHsJmRkAgAAA9hKZGQCA/////5kZAID/////////v/////9l5v+///+D9mXm/7///wAA////v///g/bMzP+///+D9o6C/7///4P2cH3/v///g/YyM/+///+D9pkZ/7///wAAAAD/v/////+ZGf+//////wAA/78AAHsJcH3Sz///g/ZwfdLP//+D9o6C0s8AAHsJjoLSz///g/aOgtLP//+D9szM0s8AAHsJzMzSzwAAewmOgtLPAAB7CTIz0s///4P2MjPSz///g/ZwfdLPAAB7CXB90s8AAHsJmRnSz///g/aZGdLP//+D9jIz0s8AAHsJMjPSzwAAewnMzNLP//+D9szM0s///4P2ZebSzwAAewll5tLP/3////9/////f////3////9/////f////3////9/////f////3////9/////f///A6f3sQOn97EDp/exA6f3sf9/////f////3////9/////f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/38Dp/exA6f3sQOn97EDp/ex/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAAOn97EDp/exA6f3sQOn97EDp/exA6f3sQOn97EDp/exA6f3sQOn97EDp/exA6f3sQOn97EDp/exA6f3sQOn97EDp/exA6f3sQOn97EDp/ex")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_f7b0h")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cbrbi"]
+data = PackedVector3Array(-0.5, 0.02, 0.4, -0.5, 0.02, 0.5, -0.5, 0, 0.5, -0.5, 0.01, 0.4, -0.5, 0.02, 0.4, -0.5, 0, 0.5, -0.5, 0.01, 0.3, -0.5, 0.01, 0.4, -0.5, 0, 0.5, -0.5, 0.01, 0.01, -0.5, 0.01, 0.3, -0.5, 0, 0.5, -0.5, 0.01, -0.01, -0.5, 0.01, 0.01, -0.5, 0, 0.5, -0.5, 0.01, -0.3, -0.5, 0.01, -0.01, -0.5, 0, 0.5, -0.5, 0.01, -0.4, -0.5, 0.01, -0.3, -0.5, 0, 0.5, -0.5, 0.01, -0.4, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0.02, -0.5, -0.5, 0.01, -0.4, -0.5, 0.02, -0.4, -0.5, 0.01, -0.4, -0.5, 0.02, -0.5, -0.5, 0.02, 0.4, 0.5, 0.27, 0.4, 0.5, 0.27, 0.5, 0.5, 0.27, 0.5, -0.5, 0.02, 0.5, -0.5, 0.02, 0.4, 0.5, 0.27, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.02, 0.5, 0.5, 0.27, 0.5, -0.5, 0.02, -0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0.27, -0.5, -0.5, 0.02, -0.5, -0.5, 0.02, 0.4, -0.5, 0.01, 0.4, 0.5, 0.26, 0.4, 0.5, 0.26, 0.4, 0.5, 0.27, 0.4, -0.5, 0.02, 0.4, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.02, -0.5, 0.5, 0.27, -0.5, 0.5, 0.27, -0.4, 0.5, 0.27, -0.4, -0.5, 0.02, -0.4, -0.5, 0.02, -0.5, 0.5, 0.26, -0.4, -0.5, 0.01, -0.4, -0.5, 0.02, -0.4, -0.5, 0.02, -0.4, 0.5, 0.27, -0.4, 0.5, 0.26, -0.4, 0.5, 0.27, 0.5, 0.5, 0.27, 0.4, 0.5, 0.26, 0.4, 0.5, 0, 0.5, 0.5, 0.27, 0.5, 0.5, 0.26, 0.4, 0.5, 0, 0.5, 0.5, 0.26, 0.4, 0.5, 0.26, 0.3, 0.5, 0, 0.5, 0.5, 0.26, 0.3, 0.5, 0.26, 0.01, 0.5, 0, 0.5, 0.5, 0.26, 0.01, 0.5, 0.26, -0.01, 0.5, 0, 0.5, 0.5, 0.26, -0.01, 0.5, 0.26, -0.3, 0.5, 0, 0.5, 0.5, 0.26, -0.3, 0.5, 0.26, -0.4, 0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0.26, -0.4, 0.5, 0, -0.5, 0.5, 0.26, -0.4, 0.5, 0.27, -0.4, 0.5, 0.27, -0.4, 0.5, 0.27, -0.5, 0.5, 0, -0.5, -0.5, 0.01, -0.01, 0.5, 0.26, -0.01, 0.5, 0.26, 0.01, 0.5, 0.26, 0.01, -0.5, 0.01, 0.01, -0.5, 0.01, -0.01, 0.5, 0.26, 0.01, 0.5, 0.26, 0.3, -0.5, 0.01, 0.3, -0.5, 0.01, 0.3, -0.5, 0.01, 0.01, 0.5, 0.26, 0.01, -0.5, 0.01, -0.3, 0.5, 0.26, -0.3, 0.5, 0.26, -0.01, 0.5, 0.26, -0.01, -0.5, 0.01, -0.01, -0.5, 0.01, -0.3, -0.5, 0.01, -0.4, 0.5, 0.26, -0.4, 0.5, 0.26, -0.3, 0.5, 0.26, -0.3, -0.5, 0.01, -0.3, -0.5, 0.01, -0.4, -0.5, 0.01, 0.3, 0.5, 0.26, 0.3, 0.5, 0.26, 0.4, 0.5, 0.26, 0.4, -0.5, 0.01, 0.4, -0.5, 0.01, 0.3)
+
+[node name="wall_ramp" type="Node3D"]
+
+[node name="road-slant" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.333, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_cogiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="road-slant"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road-slant/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cbrbi")
+
+[node name="road-slant2" parent="road-slant" instance=ExtResource("2_4j43r")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.52, 0, 0)
+
+[node name="more_ramp" type="Node3D" parent="."]
+
+[node name="road-slant2" type="MeshInstance3D" parent="more_ramp"]
+transform = Transform3D(0.240315, -0.0917872, 0, 0.0683957, 0.317714, 0.121869, -0.00839794, -0.0390104, 0.992546, 0.35, 0.1, 0)
+mesh = SubResource("ArrayMesh_cogiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="more_ramp/road-slant2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="more_ramp/road-slant2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cbrbi")
+
+[node name="road-slant2" parent="more_ramp/road-slant2" instance=ExtResource("2_4j43r")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.52, 0, 0)
+
+[node name="road-slant3" type="MeshInstance3D" parent="more_ramp"]
+transform = Transform3D(0.234923, -0.113893, 0, 0.0829652, 0.303623, 0.241922, -0.0206855, -0.0757016, 0.970296, 0.55, 0.2, 0)
+mesh = SubResource("ArrayMesh_cogiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="more_ramp/road-slant3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="more_ramp/road-slant3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cbrbi")
+
+[node name="road-slant2" parent="more_ramp/road-slant3" instance=ExtResource("2_4j43r")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.52, 0, 0)
+
+[node name="road-slant4" type="MeshInstance3D" parent="more_ramp"]
+transform = Transform3D(0.226577, -0.140732, 0, 0.0998983, 0.285358, 0.325568, -0.0343977, -0.0982567, 0.945519, 0.75, 0.335, 0)
+mesh = SubResource("ArrayMesh_cogiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="more_ramp/road-slant4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="more_ramp/road-slant4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cbrbi")
+
+[node name="road-slant2" parent="more_ramp/road-slant4" instance=ExtResource("2_4j43r")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.52, 0, 0)
+
+[node name="more_ramp2" type="Node3D" parent="."]
+transform = Transform3D(0.965926, -0.258819, 0, 0.253163, 0.944818, 0.207912, -0.0538115, -0.200827, 0.978148, 0.65, 0.3, 0)
+
+[node name="road-slant2" type="MeshInstance3D" parent="more_ramp2"]
+transform = Transform3D(0.240315, -0.0917872, 0, 0.0683957, 0.317714, 0.121869, -0.00839794, -0.0390104, 0.992546, 0.35, 0.1, 0)
+mesh = SubResource("ArrayMesh_cogiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="more_ramp2/road-slant2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="more_ramp2/road-slant2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cbrbi")
+
+[node name="road-slant2" parent="more_ramp2/road-slant2" instance=ExtResource("2_4j43r")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.52, 0, 0)
+
+[node name="road-slant3" type="MeshInstance3D" parent="more_ramp2"]
+transform = Transform3D(0.234923, -0.113893, 0, 0.0829652, 0.303623, 0.241922, -0.0206855, -0.0757016, 0.970296, 0.58, 0.2, 0)
+mesh = SubResource("ArrayMesh_cogiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="more_ramp2/road-slant3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="more_ramp2/road-slant3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cbrbi")
+
+[node name="road-slant2" parent="more_ramp2/road-slant3" instance=ExtResource("2_4j43r")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.52, 0, 0)
+
+[node name="road-slant4" type="MeshInstance3D" parent="more_ramp2"]
+transform = Transform3D(0.226577, -0.140732, 0, 0.0992828, 0.2836, 0.34202, -0.036136, -0.103222, 0.939693, 0.8, 0.35, 0)
+mesh = SubResource("ArrayMesh_cogiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="more_ramp2/road-slant4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="more_ramp2/road-slant4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999848, -0.0174524, 0, 0.0174524, 0.999848, 0.075, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_cbrbi")
+
+[node name="road-slant2" parent="more_ramp2/road-slant4" instance=ExtResource("2_4j43r")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, -0.52, 0, 0)
+
+[node name="more_more_ramp" type="Node3D" parent="more_ramp2"]
+
+[node name="road-straight2" parent="more_ramp2/more_more_ramp" instance=ExtResource("3_4j43r")]
+transform = Transform3D(0.245746, -0.573576, 0, 0.155951, 0.742404, 0.422618, -0.0727212, -0.346189, 0.906308, 1.025, 0.5, -0.1)
+
+[node name="road-straight3" parent="more_ramp2/more_more_ramp" instance=ExtResource("3_4j43r")]
+transform = Transform3D(0.229813, -0.642788, 0, 0.171818, 0.682551, 0.45399, -0.0875458, -0.347777, 0.891006, 1.25, 0.6, -0.2)
+
+[node name="road-straight4" parent="more_ramp2/more_more_ramp" instance=ExtResource("3_4j43r")]
+transform = Transform3D(0.202677, -0.737277, 0, 0.197076, 0.601955, 0.45399, -0.100415, -0.306712, 0.891006, 1.475, 0.73, -0.3)

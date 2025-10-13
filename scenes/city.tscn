@@ -1,24 +1,26 @@
-[gd_scene load_steps=12 format=3 uid="uid://dluodbc4h2qhd"]
+[gd_scene load_steps=14 format=3 uid="uid://dluodbc4h2qhd"]
 
 [ext_resource type="PackedScene" uid="uid://rjx8tx5y7j2p" path="res://addons/srcoder_simplecar/follow_camera.tscn" id="1_drx7m"]
 [ext_resource type="PackedScene" uid="uid://cpa60otc41nh0" path="res://prefabs/game.tscn" id="2_8uhr2"]
 [ext_resource type="PackedScene" uid="uid://bwsoo7hi84lf5" path="res://addons/srcoder_simplecar/new_car.tscn" id="3_3br4m"]
 [ext_resource type="PackedScene" uid="uid://bcpshkphq45se" path="res://delivery_system/compass.tscn" id="4_4lp1f"]
 [ext_resource type="PackedScene" uid="uid://dun8xojj4a8b6" path="res://delivery_system/delivery_system.tscn" id="5_07bxp"]
-[ext_resource type="PackedScene" uid="uid://d2dqipnn8e4eo" path="res://prefabs/zombie_ragdoll.tscn" id="5_8uhr2"]
 [ext_resource type="PackedScene" uid="uid://f2k3wy48sju0" path="res://prefabs/city_block.tscn" id="6_q8eg3"]
 [ext_resource type="PackedScene" uid="uid://dyka3w6jiwmpb" path="res://prefabs/city_block_three.tscn" id="7_obbxu"]
+[ext_resource type="PackedScene" uid="uid://dbwbekar34qge" path="res://prefabs/road_ramp.tscn" id="8_3br4m"]
+[ext_resource type="PackedScene" uid="uid://72b7x3w248lw" path="res://prefabs/construction_barrier.tscn" id="8_8uhr2"]
+[ext_resource type="PackedScene" uid="uid://d2dqipnn8e4eo" path="res://prefabs/zombie_ragdoll.tscn" id="10_4lp1f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0ml3"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
-[sub_resource type="Sky" id="Sky_atcic"]
+[sub_resource type="Sky" id="Sky_4lp1f"]
 sky_material = SubResource("ProceduralSkyMaterial_w0ml3")
 
 [sub_resource type="Environment" id="Environment_xjct3"]
 background_mode = 2
-sky = SubResource("Sky_atcic")
+sky = SubResource("Sky_4lp1f")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -37,398 +39,14 @@ follow_target = NodePath("../Game/car")
 [node name="Game" parent="." instance=ExtResource("2_8uhr2")]
 
 [node name="car" parent="Game" instance=ExtResource("3_3br4m")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 770, 3.298, 1540)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.298, 40)
 
 [node name="compass" parent="Game/car" node_paths=PackedStringArray("destination") instance=ExtResource("4_4lp1f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.38419e-07, 0)
 destination = NodePath("../../../delivery_system")
 
-[node name="Zombie group" type="Node3D" parent="Game"]
-transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 770, 0, 1160)
-
-[node name="Zombie" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group2" type="Node3D" parent="Game/Zombie group"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -285.714)
-
-[node name="Zombie" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group3" type="Node3D" parent="Game/Zombie group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -662.857)
-
-[node name="Zombie" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group4" type="Node3D" parent="Game/Zombie group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -891.429)
-
-[node name="Zombie" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group2" type="Node3D" parent="Game"]
-transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 390, 0, 1160)
-
-[node name="Zombie" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group2" type="Node3D" parent="Game/Zombie group2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -285.714)
-
-[node name="Zombie" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group2/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group3" type="Node3D" parent="Game/Zombie group2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -662.857)
-
-[node name="Zombie" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group2/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group4" type="Node3D" parent="Game/Zombie group2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -891.429)
-
-[node name="Zombie" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group2/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group3" type="Node3D" parent="Game"]
-transform = Transform3D(-7.64949e-08, 0, 1.75, 0, 1.75, 0, -1.75, 0, -7.64949e-08, 770, 0, -370)
-
-[node name="Zombie" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group2" type="Node3D" parent="Game/Zombie group3"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -285.714)
-
-[node name="Zombie" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group3/Zombie group2" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group3" type="Node3D" parent="Game/Zombie group3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -662.857)
-
-[node name="Zombie" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group3/Zombie group3" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
-[node name="Zombie group4" type="Node3D" parent="Game/Zombie group3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -891.429)
-
-[node name="Zombie" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-
-[node name="Zombie2" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -0.571442, 0.571429, -5.14288)
-
-[node name="Zombie3" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, -5.14288)
-
-[node name="Zombie4" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.571411, 0.571429, -1.71429)
-
-[node name="Zombie5" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, 1.71429)
-
-[node name="Zombie6" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.85715, 0.571429, 27.4286)
-
-[node name="Zombie7" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 1.14285, 0.571429, 13.1428)
-
-[node name="Zombie8" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -4, 0.571429, 86.8571)
-
-[node name="Zombie9" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -2.28574, 0.571429, -48.5714)
-
-[node name="Zombie10" parent="Game/Zombie group3/Zombie group4" instance=ExtResource("5_8uhr2")]
-transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, -1.71429, 0.571429, -24)
-
 [node name="delivery_system" parent="." instance=ExtResource("5_07bxp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -320, 1, -385)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -520, 1, -385)
 
 [node name="Map" type="Node3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
@@ -460,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 480)
 
 [node name="edge" type="Node3D" parent="Map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 480)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 960, 0, 480)
 
 [node name="CityBlockThreeDirections5" parent="Map/edge" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
@@ -471,20 +89,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920,
 [node name="CityBlockThreeDirections4" parent="Map/edge" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
 
-[node name="edge2" type="Node3D" parent="Map/edge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1440)
-
-[node name="CityBlockThreeDirections5" parent="Map/edge/edge2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
-
-[node name="CityBlockThreeDirections3" parent="Map/edge/edge2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
-
-[node name="CityBlockThreeDirections4" parent="Map/edge/edge2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
-
 [node name="edge3" type="Node3D" parent="Map/edge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1440)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -480, 0, -1440)
 
 [node name="CityBlockThreeDirections5" parent="Map/edge/edge3" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
@@ -495,199 +101,74 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920,
 [node name="CityBlockThreeDirections4" parent="Map/edge/edge3" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
 
-[node name="edge" type="Node3D" parent="Map/edge"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -960, 0, -960)
+[node name="CityBlockThreeDirections6" parent="Map/edge/edge3" instance=ExtResource("7_obbxu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -1440)
 
-[node name="CityBlockThreeDirections5" parent="Map/edge/edge" instance=ExtResource("7_obbxu")]
+[node name="edge4" type="Node3D" parent="Map/edge"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1920, 0, 480)
+
+[node name="CityBlockThreeDirections5" parent="Map/edge/edge4" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
 
-[node name="CityBlockThreeDirections3" parent="Map/edge/edge" instance=ExtResource("7_obbxu")]
+[node name="CityBlockThreeDirections3" parent="Map/edge/edge4" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
 
-[node name="CityBlockThreeDirections4" parent="Map/edge/edge" instance=ExtResource("7_obbxu")]
+[node name="CityBlockThreeDirections4" parent="Map/edge/edge4" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
 
-[node name="edge2" type="Node3D" parent="Map/edge/edge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1440)
+[node name="CityBlockThreeDirections6" parent="Map/edge/edge4" instance=ExtResource("7_obbxu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -1440)
 
-[node name="CityBlockThreeDirections5" parent="Map/edge/edge/edge2" instance=ExtResource("7_obbxu")]
+[node name="road-slant2" parent="Map" instance=ExtResource("8_3br4m")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 7, 0, 5.24537e-07, 0, -6, -510, 0.2, -485)
+
+[node name="construction-barrier2" parent="Map" instance=ExtResource("8_8uhr2")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -520, 0, -480)
+
+[node name="construction-barrier3" parent="Map" instance=ExtResource("8_8uhr2")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -583, 0, -480)
+
+[node name="construction-barrier4" parent="Map" instance=ExtResource("8_8uhr2")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 400, 0, -480)
+
+[node name="construction-barrier5" parent="Map" instance=ExtResource("8_8uhr2")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, 0, 0, -450)
+
+[node name="construction-barrier6" parent="Map" instance=ExtResource("8_8uhr2")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, -480, 0, -150)
+
+[node name="construction-barrier7" parent="Map" instance=ExtResource("8_8uhr2")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -900, 0, -480)
+
+[node name="construction-barrier8" parent="Map" instance=ExtResource("8_8uhr2")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -900, 0, -480)
+
+[node name="edge2" type="Node3D" parent="Map"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -960, 0, -480)
+
+[node name="CityBlockThreeDirections5" parent="Map/edge2" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
 
-[node name="CityBlockThreeDirections3" parent="Map/edge/edge/edge2" instance=ExtResource("7_obbxu")]
+[node name="CityBlockThreeDirections3" parent="Map/edge2" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
 
-[node name="CityBlockThreeDirections4" parent="Map/edge/edge/edge2" instance=ExtResource("7_obbxu")]
+[node name="CityBlockThreeDirections4" parent="Map/edge2" instance=ExtResource("7_obbxu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
 
-[node name="edge3" type="Node3D" parent="Map/edge/edge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1440)
+[node name="CityBlockThreeDirections6" parent="Map/edge2" instance=ExtResource("7_obbxu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1920, 0, 480)
 
-[node name="CityBlockThreeDirections5" parent="Map/edge/edge/edge3" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -960)
+[node name="CityBlockThreeDirections7" parent="Map/edge2" instance=ExtResource("7_obbxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1920, 0, -1440)
 
-[node name="CityBlockThreeDirections3" parent="Map/edge/edge/edge3" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, -480)
+[node name="Zombie" parent="Map" instance=ExtResource("10_4lp1f")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -480, 1.25, -220)
 
-[node name="CityBlockThreeDirections4" parent="Map/edge/edge/edge3" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1920, 0, 0)
+[node name="Zombie" parent="." instance=ExtResource("10_4lp1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -766, 1, -2)
 
-[node name="CityBlock10" parent="Map" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -960, 0, -480)
-
-[node name="CityBlock13" parent="Map" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -960, 0, 0)
-
-[node name="CityBlock14" parent="Map" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -960, 0, 480)
-
-[node name="Side" type="Node3D" parent="Map"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 960, 0, 1440)
-
-[node name="CityBlock" parent="Map/Side" instance=ExtResource("6_q8eg3")]
-
-[node name="CityBlock3" parent="Map/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 0)
-
-[node name="CityBlockThreeDirections3" parent="Map/Side" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 0)
-
-[node name="CityBlockThreeDirections4" parent="Map/Side" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 480)
-
-[node name="CityBlock5" parent="Map/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, -480)
-
-[node name="CityBlock6" parent="Map/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -480, 0, -480)
-
-[node name="CityBlock8" parent="Map/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, -480)
-
-[node name="CityBlock9" parent="Map/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 0)
-
-[node name="CityBlockThreeDirections5" parent="Map/Side" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, -480)
-
-[node name="Map2" type="Node3D" parent="Map/Side"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1920)
-
-[node name="CityBlockThreeDirections" parent="Map/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 960)
-
-[node name="CityBlock10" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 960)
-
-[node name="CityBlock11" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 960)
-
-[node name="CityBlock" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-
-[node name="CityBlock2" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 480)
-
-[node name="CityBlock3" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 0)
-
-[node name="CityBlockThreeDirections3" parent="Map/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 0)
-
-[node name="CityBlockThreeDirections4" parent="Map/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 480)
-
-[node name="CityBlock4" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 480)
-
-[node name="CityBlock9" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 0)
-
-[node name="CityBlock7" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 480)
-
-[node name="CityBlockThreeDirections5" parent="Map/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, -480)
-
-[node name="CityBlock12" parent="Map/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 960)
-
-[node name="Side" type="Node3D" parent="Map/Side"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2880, 0, -1920)
-
-[node name="CityBlock" parent="Map/Side/Side" instance=ExtResource("6_q8eg3")]
-
-[node name="CityBlock3" parent="Map/Side/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 0)
-
-[node name="CityBlockThreeDirections3" parent="Map/Side/Side" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 0)
-
-[node name="CityBlockThreeDirections4" parent="Map/Side/Side" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 480)
-
-[node name="CityBlock5" parent="Map/Side/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, -480)
-
-[node name="CityBlock6" parent="Map/Side/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -480, 0, -480)
-
-[node name="CityBlock8" parent="Map/Side/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, -480)
-
-[node name="CityBlock9" parent="Map/Side/Side" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 0)
-
-[node name="CityBlockThreeDirections5" parent="Map/Side/Side" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, -480)
-
-[node name="Map2" type="Node3D" parent="Map/Side/Side"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1920)
-
-[node name="CityBlockThreeDirections" parent="Map/Side/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 960)
-
-[node name="CityBlock10" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 960)
-
-[node name="CityBlock11" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 960)
-
-[node name="CityBlock" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-
-[node name="CityBlock2" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 480)
-
-[node name="CityBlock3" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 0)
-
-[node name="CityBlockThreeDirections3" parent="Map/Side/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 0)
-
-[node name="CityBlockThreeDirections4" parent="Map/Side/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, 480)
-
-[node name="CityBlock4" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 480)
-
-[node name="CityBlock5" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 1440, 0, 0)
-
-[node name="CityBlock6" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1920, 0, 0)
-
-[node name="CityBlock8" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 960, 0, 0)
-
-[node name="CityBlock9" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 0)
-
-[node name="CityBlock7" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480, 0, 480)
-
-[node name="CityBlockThreeDirections5" parent="Map/Side/Side/Map2" instance=ExtResource("7_obbxu")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -960, 0, -480)
-
-[node name="CityBlock12" parent="Map/Side/Side/Map2" instance=ExtResource("6_q8eg3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, 0, 960)
+[node name="Zombie2" parent="." instance=ExtResource("10_4lp1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -396, 1, -383)
 
 [connection signal="player_entered_destination" from="delivery_system" to="Game" method="_on_player_reached_destination"]
 
